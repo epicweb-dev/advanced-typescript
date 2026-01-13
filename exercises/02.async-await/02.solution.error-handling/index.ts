@@ -59,6 +59,7 @@ async function loadUserData() {
 	}
 }
 
-loadUserData()
+// Uncomment to test:
+// loadUserData()
 
-export {}
+export { fetchUser, fetchOrders, loadUserData }

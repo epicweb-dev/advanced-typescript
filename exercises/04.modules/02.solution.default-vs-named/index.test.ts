@@ -18,7 +18,8 @@ await testStep('formatDate formats dates correctly', () => {
 		return new Intl.DateTimeFormat('en-US').format(date)
 	}
 
-	const date = new Date('2024-01-15')
+	// Use explicit time to avoid timezone issues
+	const date = new Date(2024, 0, 15, 12, 0, 0)
 	const result = formatDate(date)
 	expect(result).toMatch(/1\/15\/2024/)
 })
@@ -39,6 +40,7 @@ await testStep('Formatter class formats currency and dates', () => {
 
 	const formatter = new Formatter()
 	expect(formatter.formatCurrency(199.99)).toBe('$199.99')
-	const date = new Date('2024-01-15')
+	// Use explicit time to avoid timezone issues
+	const date = new Date(2024, 0, 15, 12, 0, 0)
 	expect(formatter.formatDate(date)).toMatch(/1\/15\/2024/)
 })
