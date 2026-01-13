@@ -1,0 +1,32 @@
+# Function Utility Types
+
+👨‍💼 TypeScript provides utilities for working with function types. These are
+essential when wrapping or transforming functions.
+
+- **`ReturnType<T>`** - Get the return type of a function
+- **`Parameters<T>`** - Get parameter types as a tuple
+- **`Awaited<T>`** - Unwrap Promise types
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Use `ReturnType` to extract a function's return type
+2. Use `Parameters` to get a function's parameter types
+3. Use `Awaited` to unwrap Promise types
+4. Create a wrapper function that preserves types
+
+💰 Function utility examples:
+
+```ts
+type Fn = (a: string, b: number) => boolean
+type R = ReturnType<Fn> // boolean
+type P = Parameters<Fn> // [a: string, b: number]
+```
+
+💰 Unwrapping promises:
+
+```ts
+type T = Awaited<Promise<string>> // string
+type T2 = Awaited<Promise<Promise<number>>> // number (recursive)
+```
+
+📜 [TypeScript Handbook - ReturnType](https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype)

@@ -1,0 +1,46 @@
+# Type Operators
+
+TypeScript provides operators that work on **types**, not values. These are
+essential for writing type-safe, flexible code.
+
+## The `keyof` Operator
+
+`keyof` extracts the keys of an object type as a union:
+
+```ts
+type User = { id: string; name: string; age: number }
+type UserKeys = keyof User // 'id' | 'name' | 'age'
+```
+
+## The `typeof` Operator
+
+`typeof` extracts the type from a value:
+
+```ts
+const config = { host: 'localhost', port: 3000 }
+type Config = typeof config // { host: string; port: number }
+```
+
+Combined with `as const`, this is powerful:
+
+```ts
+const colors = ['red', 'green', 'blue'] as const
+type Color = (typeof colors)[number] // 'red' | 'green' | 'blue'
+```
+
+## Index Access Types
+
+Access a property's type using bracket notation:
+
+```ts
+type User = { id: string; name: string }
+type IdType = User['id'] // string
+type NameOrId = User['id' | 'name'] // string (union of both)
+```
+
+<callout-info>
+These operators are the building blocks for advanced TypeScript patterns. They
+appear in utility types, library definitions, and sophisticated generic code.
+</callout-info>
+
+In this exercise, you'll use these operators to build type-safe utilities.

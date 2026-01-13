@@ -1,0 +1,25 @@
+# Basic Conditionals
+
+👨‍💼 Let's create conditional types that check and transform based on type
+conditions.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create an `IsString<T>` type that returns `true` or `false`
+2. Create an `IsArray<T>` type
+3. Create a `Flatten<T>` that unwraps arrays
+4. Create `NonNullable<T>` from scratch
+
+💰 Conditional type syntax:
+
+```ts
+type Check<T> = T extends SomeType ? ResultIfTrue : ResultIfFalse
+```
+
+💰 Checking for arrays:
+
+```ts
+type IsArray<T> = T extends any[] ? true : false
+```
+
+📜 [TypeScript Handbook - Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html)

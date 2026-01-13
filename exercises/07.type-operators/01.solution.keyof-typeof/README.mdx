@@ -1,0 +1,18 @@
+# keyof and typeof
+
+👨‍💼 You've used type operators to extract and work with types!
+
+🦉 The `as const` trick is essential for deriving literal union types from
+arrays:
+
+```ts
+// Without as const
+const colors = ['red', 'blue'] // string[]
+type Color = (typeof colors)[number] // string 😢
+
+// With as const
+const colors = ['red', 'blue'] as const // readonly ['red', 'blue']
+type Color = (typeof colors)[number] // 'red' | 'blue' 🎉
+```
+
+This pattern is used everywhere for configuration and constants.

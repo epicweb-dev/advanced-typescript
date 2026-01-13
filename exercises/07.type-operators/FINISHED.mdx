@@ -1,0 +1,28 @@
+# Type Operators
+
+👨‍💼 You've mastered TypeScript's type operators!
+
+You learned:
+
+- 🔑 **`keyof`** extracts property keys as a union
+- 📋 **`typeof`** extracts types from values
+- 🔍 **Index access** gets property types with `T['prop']`
+- 🔒 **`as const`** preserves literal types
+
+🦉 These operators combine powerfully:
+
+```ts
+const routes = {
+	home: '/',
+	about: '/about',
+	users: '/users',
+} as const
+
+type RouteKey = keyof typeof routes // 'home' | 'about' | 'users'
+type RoutePath = (typeof routes)[RouteKey] // '/' | '/about' | '/users'
+```
+
+This pattern is used everywhere: configuration objects, event maps, action
+types, and more.
+
+Next up: Mapped types—how utility types actually work!

@@ -1,0 +1,35 @@
+# More Utility Types
+
+👨‍💼 Let's explore more utility types for objects and union types.
+
+## Object Utilities
+
+- **`Record<K, V>`** - Create object with keys K and values V
+- **`Readonly<T>`** - Make all properties readonly
+- **`Omit<T, K>`** - Remove properties K from T
+- **`Required<T>`** - Make all properties required
+
+## Union Utilities
+
+- **`Exclude<T, U>`** - Remove types assignable to U from T
+- **`Extract<T, U>`** - Keep only types assignable to U in T
+- **`NonNullable<T>`** - Remove null and undefined from T
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Use `Record` to create a config type
+2. Use `Readonly` to make a user immutable
+3. Use `Omit` to create a user type without id
+4. Use `Required` to make optional properties required
+5. Use `Exclude`, `Extract`, and `NonNullable` on union types
+
+💰 Examples:
+
+```ts
+type Config = Record<string, number>
+type NoId = Omit<User, 'id'>
+type ValidStatus = NonNullable<Status>
+type StringOnly = Extract<Status, string>
+```
+
+📜 [TypeScript Handbook - Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)

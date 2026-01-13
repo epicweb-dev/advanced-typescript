@@ -1,0 +1,51 @@
+# Conditional Types
+
+Conditional types are like `if` statements for types. They let you choose
+between types based on conditions.
+
+```ts
+type IsString<T> = T extends string ? true : false
+
+type A = IsString<string> // true
+type B = IsString<number> // false
+```
+
+## The Syntax
+
+```ts
+T extends U ? TrueType : FalseType
+```
+
+- If `T` is assignable to `U`, the result is `TrueType`
+- Otherwise, the result is `FalseType`
+
+## Practical Examples
+
+```ts
+// Extract return type of a function
+type Return<T> = T extends (...args: any[]) => infer R ? R : never
+
+// Unwrap a Promise
+type Unwrap<T> = T extends Promise<infer U> ? U : T
+
+// Filter union types
+type OnlyStrings<T> = T extends string ? T : never
+type Result = OnlyStrings<'a' | 1 | 'b' | 2> // 'a' | 'b'
+```
+
+## The `infer` Keyword
+
+`infer` declares a type variable within the condition:
+
+```ts
+type GetArrayElement<T> = T extends Array<infer E> ? E : never
+
+type Element = GetArrayElement<string[]> // string
+```
+
+<callout-info>
+Conditional types are advanced but essential for understanding how TypeScript's
+utility types work, especially `ReturnType`, `Parameters`, and `Awaited`.
+</callout-info>
+
+In this exercise, you'll create conditional type utilities.

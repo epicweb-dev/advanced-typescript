@@ -1,0 +1,14 @@
+# Basic Conditionals
+
+👨‍💼 You've created type-level conditionals!
+
+🦉 Notice how `Flatten` uses `infer`:
+
+```ts
+type Flatten<T> = T extends Array<infer U> ? U : T
+```
+
+This pattern says: "If T is an array of something, call that something U and
+return it. Otherwise, return T."
+
+This is exactly how TypeScript extracts types from complex structures.

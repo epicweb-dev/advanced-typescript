@@ -1,0 +1,30 @@
+# The infer Keyword
+
+👨‍💼 The `infer` keyword lets you extract types from complex type patterns. It's
+like pattern matching for types.
+
+```ts
+// Extract return type of a function
+type ReturnType<T> = T extends (...args: any[]) => infer R ? R : never
+
+// Extract element type from array
+type ElementType<T> = T extends (infer E)[] ? E : never
+
+// Extract resolved type from Promise
+type Awaited<T> = T extends Promise<infer U> ? U : T
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Recreate `ReturnType<T>` from scratch
+2. Recreate `Parameters<T>` from scratch
+3. Create `PromiseValue<T>` to unwrap Promises
+4. Create `FirstArg<T>` to get a function's first argument type
+
+💰 `infer` pattern for functions:
+
+```ts
+type Params<T> = T extends (...args: infer P) => any ? P : never
+```
+
+📜 [TypeScript Handbook - Inferring Within Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)

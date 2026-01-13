@@ -1,0 +1,18 @@
+# Index Access Types
+
+👨‍💼 You've mastered index access types!
+
+🦉 This pattern is essential when working with:
+
+- API responses (extracting nested types)
+- Configuration objects
+- Generic utilities
+- Type transformations
+
+```ts
+// Real-world example: Extract types from an API response
+type User = ApiResponse['data']['user']
+type Post = ApiResponse['data']['posts'][number]
+```
+
+No need to manually define duplicate types—just extract what you need!

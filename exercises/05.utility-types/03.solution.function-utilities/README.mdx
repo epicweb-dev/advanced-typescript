@@ -1,0 +1,23 @@
+# Function Utility Types
+
+👨‍💼 You've mastered function utilities!
+
+🦉 These are incredibly useful for:
+
+- **Wrapper functions** - Preserve parameter and return types
+- **Type extraction** - Get types from third-party libraries
+- **Generic utilities** - Write functions that work with any function
+
+```ts
+// Generic logging wrapper
+function withLogging<T extends (...args: any[]) => any>(
+	fn: T,
+): (...args: Parameters<T>) => ReturnType<T> {
+	return (...args) => {
+		console.log('Calling with:', args)
+		return fn(...args)
+	}
+}
+```
+
+This pattern is used extensively in middleware, decorators, and testing utilities.

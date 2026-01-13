@@ -1,0 +1,28 @@
+# Index Access Types
+
+👨‍💼 Index access types let you extract property types from other types using
+bracket notation.
+
+```ts
+type User = { id: string; name: string; settings: { theme: 'light' | 'dark' } }
+
+type IdType = User['id'] // string
+type SettingsType = User['settings'] // { theme: 'light' | 'dark' }
+type ThemeType = User['settings']['theme'] // 'light' | 'dark'
+```
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Extract nested property types
+2. Use unions to get multiple property types at once
+3. Combine with `keyof` for flexible access
+
+💰 Union index access:
+
+```ts
+type User = { id: string; name: string; age: number }
+type StringProps = User['id' | 'name'] // string
+type AllValues = User[keyof User] // string | number
+```
+
+📜 [TypeScript Handbook - Indexed Access Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html)

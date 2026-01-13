@@ -1,0 +1,28 @@
+# Creating Mapped Types
+
+👨‍💼 Let's build our own utility types using mapped types!
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Recreate `Partial<T>` from scratch
+2. Recreate `Required<T>` from scratch
+3. Create a `Nullable<T>` that makes all properties nullable
+4. Create a `Mutable<T>` that removes `readonly`
+
+💰 Basic mapped type:
+
+```ts
+type MyPartial<T> = {
+	[K in keyof T]?: T[K]
+}
+```
+
+💰 Removing modifiers with `-`:
+
+```ts
+type RemoveOptional<T> = {
+	[K in keyof T]-?: T[K]
+}
+```
+
+📜 [TypeScript Handbook - Mapped Types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html)

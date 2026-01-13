@@ -13,7 +13,7 @@ type Product = {
 }
 
 async function fetchUser(): Promise<User> {
-	return new Promise<User>((resolve) => {
+	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve({
 				id: '1',
@@ -25,7 +25,7 @@ async function fetchUser(): Promise<User> {
 }
 
 async function fetchProducts(): Promise<Product[]> {
-	return new Promise<Product[]>((resolve) => {
+	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve([
 				{ id: 'p1', name: 'Laptop', price: 999.99 },

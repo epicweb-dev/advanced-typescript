@@ -1,0 +1,27 @@
+# Conditional Types
+
+👨‍💼 You've learned type-level programming with conditional types!
+
+You learned:
+
+- ❓ **Conditionals** with `T extends U ? A : B`
+- 🔮 **`infer`** to extract types from patterns
+- 🔍 **Filtering unions** with distributed conditionals
+- 🛠️ **Building utilities** like `ReturnType` and `Awaited`
+
+🦉 Conditional types power many advanced patterns:
+
+```ts
+// TypeScript's built-in NonNullable
+type NonNullable<T> = T extends null | undefined ? never : T
+
+// TypeScript's built-in ReturnType
+type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any
+
+// TypeScript's built-in Awaited
+type Awaited<T> = T extends Promise<infer U> ? Awaited<U> : T
+```
+
+You now have the tools to understand and create advanced TypeScript patterns!
+
+🎉 Congratulations on completing these advanced topics!

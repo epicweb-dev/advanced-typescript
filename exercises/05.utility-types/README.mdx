@@ -16,14 +16,32 @@ type UserPreview = Pick<User, 'id' | 'name'>
 // { id: string; name: string }
 ```
 
-## Common Utility Types
+## Object Utility Types
 
-- **Partial** - Makes all properties optional
-- **Required** - Makes all properties required
-- **Pick** - Selects specific properties
-- **Omit** - Removes specific properties
-- **Record** - Creates an object type with specific keys
-- **Readonly** - Makes all properties readonly
+| Utility             | Purpose                          |
+| ------------------- | -------------------------------- |
+| `Partial<T>`        | Makes all properties optional    |
+| `Required<T>`       | Makes all properties required    |
+| `Readonly<T>`       | Makes all properties readonly    |
+| `Pick<T, K>`        | Selects specific properties      |
+| `Omit<T, K>`        | Removes specific properties      |
+| `Record<K, V>`      | Creates object with key type K   |
+
+## Union Utility Types
+
+| Utility             | Purpose                          |
+| ------------------- | -------------------------------- |
+| `Exclude<T, U>`     | Remove types from union          |
+| `Extract<T, U>`     | Keep only types in union         |
+| `NonNullable<T>`    | Remove null and undefined        |
+
+## Function Utility Types
+
+| Utility             | Purpose                          |
+| ------------------- | -------------------------------- |
+| `ReturnType<T>`     | Get function's return type       |
+| `Parameters<T>`     | Get function's parameter types   |
+| `Awaited<T>`        | Unwrap Promise type              |
 
 <callout-info>
 Utility types are type-level functions. They take types as input and produce

@@ -1,0 +1,20 @@
+# More Utility Types
+
+👨‍💼 Excellent! You've mastered the most important utility types.
+
+🦉 Key insights:
+
+- **`Omit`** is the opposite of `Pick`—remove instead of select
+- **`Required`** is the opposite of `Partial`—add instead of remove
+- **`Exclude`/`Extract`** work on **unions**, not object properties
+- **`NonNullable`** is shorthand for `Exclude<T, null | undefined>`
+
+These utilities compose nicely:
+
+```ts
+// Remove id, then make everything optional
+type UserUpdate = Partial<Omit<User, 'id'>>
+
+// Keep only active statuses, remove null
+type ActiveStatus = NonNullable<Exclude<Status, 'deleted'>>
+```

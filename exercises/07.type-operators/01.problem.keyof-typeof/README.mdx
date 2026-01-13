@@ -1,0 +1,32 @@
+# keyof and typeof
+
+👨‍💼 Let's use `keyof` and `typeof` to create type-safe utilities.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Use `keyof` to get the keys of an object type
+2. Use `typeof` to extract types from values
+3. Combine `typeof` with `as const` for literal types
+4. Create type-safe accessor functions
+
+💰 `keyof` pattern:
+
+```ts
+type Keys = keyof SomeType
+```
+
+💰 `typeof` pattern:
+
+```ts
+const obj = { a: 1, b: 2 }
+type ObjType = typeof obj
+```
+
+💰 `as const` for literal types:
+
+```ts
+const statuses = ['pending', 'active', 'done'] as const
+type Status = (typeof statuses)[number] // 'pending' | 'active' | 'done'
+```
+
+📜 [TypeScript Handbook - Keyof](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html)
