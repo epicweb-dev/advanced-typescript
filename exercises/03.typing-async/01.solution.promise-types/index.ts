@@ -38,11 +38,11 @@ async function fetchProducts(): Promise<Product[]> {
 async function loadData() {
 	const user = await fetchUser()
 	const products = await fetchProducts()
-	
+
 	console.log('User:', user)
 	console.log('Products:', products)
 }
 
-loadData()
+void loadData()
 
 export {}

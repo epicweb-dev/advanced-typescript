@@ -39,7 +39,10 @@ const updated1 = updateUser(user, { name: 'Alice Smith' })
 const updated2 = updateUser(user, { email: 'alice.smith@example.com' })
 
 // This should work - updating both
-const updated3 = updateUser(user, { name: 'Alice Smith', email: 'alice.smith@example.com' })
+const updated3 = updateUser(user, {
+	name: 'Alice Smith',
+	email: 'alice.smith@example.com',
+})
 
 // This should NOT work - id is not in UserUpdate
 // const updated4 = updateUser(user, { id: '2' })

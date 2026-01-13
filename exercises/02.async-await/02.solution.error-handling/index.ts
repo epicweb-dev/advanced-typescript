@@ -49,7 +49,7 @@ async function loadUserData() {
 	try {
 		const user = await fetchUser()
 		console.log('User:', user)
-		
+
 		const orders = await fetchOrders(user.id)
 		console.log('Orders:', orders)
 	} catch (error) {

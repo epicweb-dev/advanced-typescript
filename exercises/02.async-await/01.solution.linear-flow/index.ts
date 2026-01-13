@@ -43,11 +43,11 @@ function fetchOrders(userId: string): Promise<Order[]> {
 async function loadUserData() {
 	const user = await fetchUser()
 	console.log('User:', user)
-	
+
 	const orders = await fetchOrders(user.id)
 	console.log('Orders:', orders)
 }
 
-loadUserData()
+void loadUserData()
 
 export {}

@@ -17,10 +17,22 @@ await testStep('fetchUser returns a User object', async () => {
 	}
 
 	const user = await fetchUser('1')
-	expect(user, '🚨 user should have an id property - import fetchUser from the users module').toHaveProperty('id')
-	expect(user, '🚨 user should have a name property - check your module exports').toHaveProperty('name')
-	expect(user, '🚨 user should have an email property - organize code with module boundaries').toHaveProperty('email')
-	expect(user.id, '🚨 user.id should be "1" - use proper import/export statements').toBe('1')
+	expect(
+		user,
+		'🚨 user should have an id property - import fetchUser from the users module',
+	).toHaveProperty('id')
+	expect(
+		user,
+		'🚨 user should have a name property - check your module exports',
+	).toHaveProperty('name')
+	expect(
+		user,
+		'🚨 user should have an email property - organize code with module boundaries',
+	).toHaveProperty('email')
+	expect(
+		user.id,
+		'🚨 user.id should be "1" - use proper import/export statements',
+	).toBe('1')
 })
 
 await testStep('fetchProduct returns a Product object', async () => {
@@ -39,10 +51,22 @@ await testStep('fetchProduct returns a Product object', async () => {
 	}
 
 	const product = await fetchProduct('p1')
-	expect(product, '🚨 product should have an id property - import fetchProduct from the products module').toHaveProperty('id')
-	expect(product, '🚨 product should have a name property - check your module exports').toHaveProperty('name')
-	expect(product, '🚨 product should have a price property - organize code with module boundaries').toHaveProperty('price')
-	expect(product.id, '🚨 product.id should be "p1" - use proper import/export statements').toBe('p1')
+	expect(
+		product,
+		'🚨 product should have an id property - import fetchProduct from the products module',
+	).toHaveProperty('id')
+	expect(
+		product,
+		'🚨 product should have a name property - check your module exports',
+	).toHaveProperty('name')
+	expect(
+		product,
+		'🚨 product should have a price property - organize code with module boundaries',
+	).toHaveProperty('price')
+	expect(
+		product.id,
+		'🚨 product.id should be "p1" - use proper import/export statements',
+	).toBe('p1')
 })
 
 await testStep('loadData loads both user and product', async () => {
@@ -81,6 +105,12 @@ await testStep('loadData loads both user and product', async () => {
 	}
 
 	const result = await loadData()
-	expect(result.user.id, '🚨 result.user.id should be "1" - import from users and products modules correctly').toBe('1')
-	expect(result.product.id, '🚨 result.product.id should be "p1" - organize code with proper module boundaries').toBe('p1')
+	expect(
+		result.user.id,
+		'🚨 result.user.id should be "1" - import from users and products modules correctly',
+	).toBe('1')
+	expect(
+		result.product.id,
+		'🚨 result.product.id should be "p1" - organize code with proper module boundaries',
+	).toBe('p1')
 })

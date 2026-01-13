@@ -1,4 +1,4 @@
-import type { User } from './types'
+import { type User } from './types'
 
 export async function fetchUser(id: string): Promise<User> {
 	return new Promise((resolve) => {

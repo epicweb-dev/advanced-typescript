@@ -50,14 +50,14 @@ async function loadUserData() {
 	//    Add a catch block to handle errors
 	//    Optionally add a finally block for cleanup
 	// 💰 try { ... } catch (error) { ... } finally { ... }
-	
+
 	const user = await fetchUser()
 	console.log('User:', user)
-	
+
 	const orders = await fetchOrders(user.id)
 	console.log('Orders:', orders)
 }
 
-loadUserData()
+void loadUserData()
 
 export {}

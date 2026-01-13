@@ -44,7 +44,12 @@ type StringUser = Stringify<User>
 // Usage examples
 const partial: PartialUser = { name: 'Alice' }
 const nullable: NullableUser = { id: null, name: 'Bob', email: null, age: 30 }
-const mutable: MutableUser = { id: '1', name: 'Charlie', email: 'c@c.com', age: 25 }
+const mutable: MutableUser = {
+	id: '1',
+	name: 'Charlie',
+	email: 'c@c.com',
+	age: 25,
+}
 
 console.log('Partial:', partial)
 console.log('Nullable:', nullable)

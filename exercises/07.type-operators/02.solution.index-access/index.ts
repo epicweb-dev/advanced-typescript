@@ -33,7 +33,10 @@ type StatusOrError = ApiResponse['status' | 'error'] // number | string | null
 type UserValues = UserType[keyof UserType] // string | { avatar: string; bio: string }
 
 // Test by creating variables
-const profile: ProfileType = { avatar: 'https://example.com/avatar.jpg', bio: 'Hello!' }
+const profile: ProfileType = {
+	avatar: 'https://example.com/avatar.jpg',
+	bio: 'Hello!',
+}
 const post: PostType = { id: '1', title: 'Hello World', published: true }
 
 console.log('Profile:', profile)

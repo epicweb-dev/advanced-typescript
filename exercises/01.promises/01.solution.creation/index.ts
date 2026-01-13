@@ -18,7 +18,7 @@ function fetchUser(): Promise<User> {
 	})
 }
 
-fetchUser().then((user) => {
+void fetchUser().then((user) => {
 	console.log('User fetched:', user)
 })
 

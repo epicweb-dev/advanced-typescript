@@ -18,35 +18,35 @@ type UserPreview = Pick<User, 'id' | 'name'>
 
 ## Object Utility Types
 
-| Utility             | Purpose                          |
-| ------------------- | -------------------------------- |
-| `Partial<T>`        | Makes all properties optional    |
-| `Required<T>`       | Makes all properties required    |
-| `Readonly<T>`       | Makes all properties readonly    |
-| `Pick<T, K>`        | Selects specific properties      |
-| `Omit<T, K>`        | Removes specific properties      |
-| `Record<K, V>`      | Creates object with key type K   |
+| Utility        | Purpose                        |
+| -------------- | ------------------------------ |
+| `Partial<T>`   | Makes all properties optional  |
+| `Required<T>`  | Makes all properties required  |
+| `Readonly<T>`  | Makes all properties readonly  |
+| `Pick<T, K>`   | Selects specific properties    |
+| `Omit<T, K>`   | Removes specific properties    |
+| `Record<K, V>` | Creates object with key type K |
 
 ## Union Utility Types
 
-| Utility             | Purpose                          |
-| ------------------- | -------------------------------- |
-| `Exclude<T, U>`     | Remove types from union          |
-| `Extract<T, U>`     | Keep only types in union         |
-| `NonNullable<T>`    | Remove null and undefined        |
+| Utility          | Purpose                   |
+| ---------------- | ------------------------- |
+| `Exclude<T, U>`  | Remove types from union   |
+| `Extract<T, U>`  | Keep only types in union  |
+| `NonNullable<T>` | Remove null and undefined |
 
 ## Function Utility Types
 
-| Utility             | Purpose                          |
-| ------------------- | -------------------------------- |
-| `ReturnType<T>`     | Get function's return type       |
-| `Parameters<T>`     | Get function's parameter types   |
-| `Awaited<T>`        | Unwrap Promise type              |
+| Utility         | Purpose                        |
+| --------------- | ------------------------------ |
+| `ReturnType<T>` | Get function's return type     |
+| `Parameters<T>` | Get function's parameter types |
+| `Awaited<T>`    | Unwrap Promise type            |
 
 <callout-info>
-Utility types are type-level functions. They take types as input and produce
-new types as output, enabling powerful type transformations without runtime
-overhead.
+	Utility types are type-level functions. They take types as input and produce
+	new types as output, enabling powerful type transformations without runtime
+	overhead.
 </callout-info>
 
 In this exercise, you'll use utility types to transform and manipulate types
