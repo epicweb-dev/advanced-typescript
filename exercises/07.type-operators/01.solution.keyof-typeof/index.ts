@@ -9,7 +9,7 @@ type User = {
 
 type UserKey = keyof User // 'id' | 'name' | 'email' | 'age'
 
-function getUserProperty<K extends UserKey>(user: User, key: K): User[K] {
+function getUserProperty<K extends UserKey>(user: User, key: K) {
 	return user[key]
 }
 
