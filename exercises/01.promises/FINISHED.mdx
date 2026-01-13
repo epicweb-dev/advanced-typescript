@@ -1,0 +1,23 @@
+# Promises
+
+👨‍💼 Excellent! You now understand how to create and work with Promises.
+
+You learned:
+
+- 🔨 **Creating Promises** with `new Promise()`
+- 🔗 **Chaining operations** with `.then()`
+- ⚠️ **Error handling** with `.catch()`
+- 🎯 **Type safety** with `Promise<T>` generic types
+
+🦉 Remember: Promises are eager—they start executing immediately when created.
+If you need lazy execution, wrap the Promise creation in a function.
+
+```ts
+// Eager - starts immediately
+const promise = fetchData()
+
+// Lazy - starts when function is called
+const getPromise = () => fetchData()
+```
+
+Next up: Async/await—a cleaner syntax for working with Promises!

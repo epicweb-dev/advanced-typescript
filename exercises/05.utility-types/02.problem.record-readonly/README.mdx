@@ -1,0 +1,21 @@
+# Record and Readonly
+
+👨‍💼 We need to create a configuration object with specific keys and a readonly
+user object.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Use `Record<string, number>` to create a type for a config object with
+   string keys and number values
+2. Use `Readonly<User>` to create a type where all properties are readonly
+3. Create a function that accepts a readonly user
+
+💰 Utility type syntax:
+
+```ts
+type Config = Record<string, number>
+type ReadonlyUser = Readonly<User>
+```
+
+📜 [TypeScript Handbook - Record](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)
+📜 [TypeScript Handbook - Readonly](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)

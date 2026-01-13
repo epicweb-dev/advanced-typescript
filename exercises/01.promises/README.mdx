@@ -1,0 +1,35 @@
+# Promises
+
+Promises are the foundation of asynchronous programming in JavaScript and
+TypeScript. They represent a value that will be available in the future—either
+a successful result or a failure.
+
+```ts
+// A Promise that resolves to a string
+const fetchUser = (): Promise<string> => {
+	return new Promise((resolve) => {
+		setTimeout(() => resolve('Alice'), 1000)
+	})
+}
+```
+
+## Why Promises Matter
+
+- **Error handling** - `.catch()` handles failures gracefully
+- **Chaining** - `.then()` chains operations together
+- **Composition** - Combine multiple async operations
+- **Type safety** - TypeScript ensures you handle the right types
+
+```ts
+fetchUser()
+	.then((name) => console.log(name))
+	.catch((error) => console.error(error))
+```
+
+<callout-info>
+Promises are everywhere in modern JavaScript. Understanding them deeply is
+essential for working with APIs, file operations, timers, and any async code.
+</callout-info>
+
+In this exercise, you'll create Promises and chain them together to handle
+realistic async scenarios.

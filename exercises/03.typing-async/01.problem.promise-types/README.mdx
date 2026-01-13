@@ -1,0 +1,27 @@
+# Promise Types
+
+👨‍💼 Let's ensure our async functions have proper type annotations. This helps
+TypeScript catch errors and makes our code more maintainable.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Add explicit return type annotations to all async functions
+2. Use `Promise<T>` to type the return values
+3. Ensure the types match what the functions actually return
+
+💰 Type annotations for async functions:
+
+```ts
+async function fetchUser(): Promise<User> {
+	// ...
+}
+
+async function processData(data: string): Promise<ProcessedData> {
+	// ...
+}
+```
+
+🦺 TypeScript will infer Promise types, but explicit annotations make your
+intent clear and help catch errors early.
+
+📜 [TypeScript Handbook - Async Functions](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-7.html#async-functions)

@@ -1,0 +1,28 @@
+# Error Handling with Async/Await
+
+👨‍💼 Our async code needs proper error handling. Let's use try/catch to handle
+failures gracefully.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Wrap the async operations in a `try` block
+2. Add a `catch` block to handle errors
+3. Optionally add a `finally` block for cleanup
+
+💰 Error handling syntax:
+
+```ts
+async function loadUserData() {
+	try {
+		const user = await fetchUser()
+		const orders = await fetchOrders(user.id)
+		console.log(user, orders)
+	} catch (error) {
+		console.error('Failed to load data:', error)
+	} finally {
+		console.log('Cleanup complete')
+	}
+}
+```
+
+📜 [MDN - try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)

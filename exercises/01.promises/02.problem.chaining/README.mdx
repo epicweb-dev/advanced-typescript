@@ -1,0 +1,28 @@
+# Chaining Promises
+
+👨‍💼 After fetching a user, we need to fetch their orders. Let's chain these
+operations together using `.then()`.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. After fetching the user, chain a call to `fetchOrders(userId)`
+2. Log both the user and their orders
+3. Add error handling with `.catch()` to log any errors
+
+💰 Promise chaining:
+
+```ts
+fetchUser()
+	.then((user) => {
+		console.log(user)
+		return fetchOrders(user.id)
+	})
+	.then((orders) => {
+		console.log(orders)
+	})
+	.catch((error) => {
+		console.error('Error:', error)
+	})
+```
+
+📜 [MDN - Promise.prototype.then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)

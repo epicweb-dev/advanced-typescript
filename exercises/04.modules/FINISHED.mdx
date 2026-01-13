@@ -1,0 +1,24 @@
+# Modules
+
+👨‍💼 Excellent! You now understand how to organize code with modules.
+
+You learned:
+
+- 📦 **Exporting** types, functions, and values
+- 📥 **Importing** from other modules
+- 🎯 **Named exports** for multiple exports
+- ⭐ **Default exports** for single primary exports
+- 🔗 **Type-only imports** for better tree-shaking
+
+🦉 A common pattern is to have an `index.ts` file that re-exports everything
+from a module:
+
+```ts
+// user/index.ts
+export * from './types'
+export * from './functions'
+```
+
+This creates a clean public API for your module.
+
+Next up: Utility types—powerful type transformations!

@@ -1,0 +1,22 @@
+# Utility Types
+
+👨‍💼 Excellent! You've mastered TypeScript's utility types.
+
+You learned:
+
+- 🔧 **Partial** - Making properties optional
+- 🎯 **Pick** - Selecting specific properties
+- 📝 **Record** - Creating key-value types
+- 🔒 **Readonly** - Making properties immutable
+- 🧩 **Composition** - Combining utility types
+
+🦉 Utility types are composable. You can combine them:
+
+```ts
+type UserUpdate = Partial<Pick<User, 'name' | 'email'>>
+// Makes only name and email optional
+```
+
+This pattern is common in APIs where you want to update specific fields.
+
+Next up: Code organization patterns!

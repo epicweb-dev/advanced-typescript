@@ -1,0 +1,35 @@
+# Async/Await
+
+Async/await is syntactic sugar over Promises that makes asynchronous code read
+like synchronous code. It's the preferred way to write async code in modern
+TypeScript.
+
+```ts
+// With Promises
+fetchUser()
+	.then((user) => console.log(user))
+	.catch((error) => console.error(error))
+
+// With async/await
+try {
+	const user = await fetchUser()
+	console.log(user)
+} catch (error) {
+	console.error(error)
+}
+```
+
+## Why Async/Await?
+
+- **Readability** - Code reads top-to-bottom like synchronous code
+- **Error handling** - Use try/catch like synchronous code
+- **Debugging** - Stack traces are clearer
+- **Less nesting** - Avoid callback hell
+
+<callout-info>
+Async/await doesn't replace Promises—it's built on top of them. Every async
+function returns a Promise, and you can await any Promise.
+</callout-info>
+
+In this exercise, you'll convert Promise chains to async/await and handle
+errors properly.

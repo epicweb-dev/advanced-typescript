@@ -1,0 +1,20 @@
+# Partial and Pick
+
+👨‍💼 We need to create types for updating user data. Some fields should be
+optional, and we only want to allow updating specific fields.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Use `Partial<User>` to create a type where all properties are optional
+2. Use `Pick<User, 'name' | 'email'>` to create a type with only name and email
+3. Combine them to create `UserUpdate` that only allows updating name and email
+
+💰 Utility type syntax:
+
+```ts
+type PartialUser = Partial<User>
+type UserNameEmail = Pick<User, 'name' | 'email'>
+type UserUpdate = Partial<Pick<User, 'name' | 'email'>>
+```
+
+📜 [TypeScript Handbook - Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html)

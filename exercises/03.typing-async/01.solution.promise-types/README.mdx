@@ -1,0 +1,16 @@
+# Promise Types
+
+👨‍💼 Perfect! Notice how TypeScript infers that `user` is of type `User` and
+`products` is of type `Product[]` after awaiting. The type system understands
+that `await` unwraps the Promise.
+
+🦉 Explicit return type annotations on async functions are especially helpful
+when:
+- The function body is complex
+- You want to document the contract
+- You're creating a library API
+
+TypeScript will still infer types, but explicit annotations make your code
+self-documenting.
+
+Next up: Modules!

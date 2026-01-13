@@ -1,0 +1,29 @@
+# Modules
+
+ES modules are the standard way to organize and share code in modern JavaScript
+and TypeScript. They let you split code into separate files and import/export
+functionality between them.
+
+```ts
+// user.ts
+export type User = { id: string; name: string }
+export function createUser(name: string): User { ... }
+
+// main.ts
+import { User, createUser } from './user'
+```
+
+## Module Benefits
+
+- **Organization** - Split code into logical files
+- **Reusability** - Share code across files
+- **Encapsulation** - Control what's public vs private
+- **Tree-shaking** - Bundlers can eliminate unused code
+
+<callout-info>
+TypeScript fully supports ES modules. Use `import` and `export` statements,
+and TypeScript will handle type checking across module boundaries.
+</callout-info>
+
+In this exercise, you'll organize code using modules and understand the
+difference between default and named exports.

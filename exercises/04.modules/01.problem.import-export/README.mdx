@@ -1,0 +1,23 @@
+# Import and Export
+
+👨‍💼 Our code is getting large. Let's split it into separate modules to keep
+things organized.
+
+🐨 Create a new file `types.ts` and:
+
+1. Move the `User` and `Product` types to `types.ts`
+2. Export them using named exports
+3. Import them in `index.ts`
+
+💰 Module syntax:
+
+```ts
+// types.ts
+export type User = { ... }
+export type Product = { ... }
+
+// index.ts
+import { User, Product } from './types'
+```
+
+📜 [MDN - ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)

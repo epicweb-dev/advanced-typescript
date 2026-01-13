@@ -1,0 +1,23 @@
+# Linear Flow with Async/Await
+
+👨‍💼 Let's convert the Promise chain from the previous exercise to use
+async/await. This will make the code much more readable!
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create an `async` function called `loadUserData`
+2. Use `await` to fetch the user
+3. Use `await` to fetch the orders
+4. Log both results
+
+💰 Async/await syntax:
+
+```ts
+async function loadUserData() {
+	const user = await fetchUser()
+	const orders = await fetchOrders(user.id)
+	console.log(user, orders)
+}
+```
+
+📜 [MDN - async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)

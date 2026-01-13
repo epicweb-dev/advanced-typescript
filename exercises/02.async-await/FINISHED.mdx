@@ -1,0 +1,26 @@
+# Async/Await
+
+👨‍💼 Excellent! You've mastered async/await syntax.
+
+You learned:
+
+- ⚡ **Async functions** return Promises automatically
+- ⏸️ **Await** pauses execution until Promise resolves
+- 🛡️ **Try/catch** handles errors naturally
+- 🔄 **Sequential flow** reads like synchronous code
+
+🦉 Remember: You can only use `await` inside `async` functions. If you're at
+the top level, wrap your code in an async function or use `.then()`.
+
+```ts
+// Top-level await (ES2022+)
+const user = await fetchUser()
+
+// Or wrap in async function
+async function main() {
+	const user = await fetchUser()
+}
+main()
+```
+
+Next up: Typing async functions properly!

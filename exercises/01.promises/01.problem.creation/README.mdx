@@ -1,0 +1,25 @@
+# Creating Promises
+
+👨‍💼 We need to simulate an API call that fetches user data. Let's create a
+Promise that resolves with user information after a delay.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create a `fetchUser` function that returns a `Promise<User>`
+2. The Promise should resolve after 1 second with a user object
+3. The user object should have: `id: string`, `name: string`, `email: string`
+
+💰 Promise creation syntax:
+
+```ts
+function fetchUser(): Promise<User> {
+	return new Promise((resolve, reject) => {
+		// Use setTimeout to simulate delay
+		setTimeout(() => {
+			resolve({ id: '1', name: 'Alice', email: 'alice@example.com' })
+		}, 1000)
+	})
+}
+```
+
+📜 [MDN - Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

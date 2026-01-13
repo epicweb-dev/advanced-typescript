@@ -1,0 +1,23 @@
+# Default vs Named Exports
+
+👨‍💼 There are two ways to export from modules: named exports and default
+exports. Let's understand when to use each.
+
+🐨 Open <InlineFile file="utils.ts" /> and:
+
+1. Export `formatCurrency` as a **named export**
+2. Export `formatDate` as a **named export**
+3. Export a `Formatter` class as the **default export**
+
+💰 Export syntax:
+
+```ts
+// Named exports
+export function formatCurrency(amount: number): string { ... }
+export function formatDate(date: Date): string { ... }
+
+// Default export
+export default class Formatter { ... }
+```
+
+📜 [MDN - Export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
