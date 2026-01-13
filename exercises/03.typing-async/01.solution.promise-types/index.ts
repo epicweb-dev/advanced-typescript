@@ -24,7 +24,7 @@ async function fetchUser(): Promise<User> {
 	})
 }
 
-async function fetchProducts(): Promise<Product[]> {
+async function fetchProducts(): Promise<Array<Product>> {
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve([

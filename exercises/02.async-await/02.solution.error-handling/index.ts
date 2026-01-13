@@ -9,7 +9,7 @@ type User = {
 type Order = {
 	id: string
 	userId: string
-	items: string[]
+	items: Array<string>
 	total: number
 }
 
@@ -30,7 +30,7 @@ function fetchUser(): Promise<User> {
 	})
 }
 
-function fetchOrders(userId: string): Promise<Order[]> {
+function fetchOrders(userId: string): Promise<Array<Order>> {
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve([

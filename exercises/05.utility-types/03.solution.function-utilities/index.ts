@@ -9,7 +9,7 @@ async function fetchUser(id: string): Promise<{ id: string; name: string }> {
 	return { id, name: 'Alice' }
 }
 
-function processData(data: string[], options: { limit: number }): number {
+function processData(data: Array<string>, options: { limit: number }): number {
 	return Math.min(data.length, options.limit)
 }
 

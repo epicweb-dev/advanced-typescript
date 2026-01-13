@@ -40,7 +40,7 @@ type Result = OnlyStrings<'a' | 1 | 'b' | 2> // 'a' | 'b'
 ```ts
 type GetArrayElement<T> = T extends Array<infer E> ? E : never
 
-type Element = GetArrayElement<string[]> // string
+type Element = GetArrayElement<Array<string>> // string
 ```
 
 <callout-info>

@@ -17,7 +17,7 @@ type LastArg<T> = T extends (...args: infer A) => any
 // Test functions
 type Fn1 = (a: string, b: number) => boolean
 type Fn2 = () => Promise<string>
-type Fn3 = (x: { id: string }, y: number[], z: boolean) => void
+type Fn3 = (x: { id: string }, y: Array<number>, z: boolean) => void
 
 // Test the types
 type R1 = MyReturnType<Fn1> // boolean
