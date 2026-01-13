@@ -67,7 +67,11 @@ await testStep('FirstArg extracts first parameter type', () => {
 })
 
 await testStep('LastArg extracts last parameter type', () => {
-	type LastArg<T> = T extends (...args: [...any[], infer L]) => any ? L : never
+	type LastArg<T> = T extends (...args: infer A) => any
+		? A extends [...infer _, infer L]
+			? L
+			: never
+		: never
 
 	type Fn3 = (x: { id: string }, y: number[], z: boolean) => void
 	type L1 = LastArg<Fn3>

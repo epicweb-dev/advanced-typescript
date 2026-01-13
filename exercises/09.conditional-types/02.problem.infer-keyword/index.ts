@@ -13,7 +13,9 @@
 // 💰 type FirstArg<T> = T extends (first: infer F, ...rest: any[]) => any ? F : never
 
 // 🐨 Create LastArg<T> - extracts the last argument type
-// 💰 type LastArg<T> = T extends (...args: [...any[], infer L]) => any ? L : never
+// 💰 type LastArg<T> = T extends (...args: infer A) => any
+// 💰   ? A extends [...infer _, infer L] ? L : never
+// 💰   : never
 
 // Test functions
 type Fn1 = (a: string, b: number) => boolean

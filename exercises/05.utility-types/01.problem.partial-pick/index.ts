@@ -20,6 +20,7 @@ type User = {
 //    It should allow updating only name and email, and both should be optional
 // 💰 type UserUpdate = Partial<Pick<User, 'name' | 'email'>>
 
+// @ts-expect-error - 💣 remove this comment
 function updateUser(user: User, updates: UserUpdate) {
 	return { ...user, ...updates }
 }
