@@ -6,4 +6,12 @@ the resolved value matches the `User` type.
 🦉 Promises start executing immediately when created. If you want to delay
 execution, wrap the Promise creation in a function (like we did here).
 
+<callout-info>
+	Notice the `void` keyword before `fetchUser().then(...)`. This tells
+	TypeScript we're intentionally ignoring the Promise's result. Without it,
+	TypeScript's `no-floating-promises` rule would warn us about an unhandled
+	Promise. Using `void` is the clean way to say "I know this returns a Promise,
+	and I'm choosing not to await or handle it."
+</callout-info>
+
 Next, let's chain multiple Promises together!
