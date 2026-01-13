@@ -1,0 +1,7 @@
+{
+  "name": "exercises_02.async-await_02.problem.error-handling",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

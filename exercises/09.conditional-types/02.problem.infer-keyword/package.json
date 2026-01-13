@@ -1,0 +1,7 @@
+{
+  "name": "exercises_09.conditional-types_02.problem.infer-keyword",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "exercises_01.promises_02.solution.chaining",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

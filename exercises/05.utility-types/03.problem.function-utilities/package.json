@@ -1,0 +1,7 @@
+{
+  "name": "exercises_05.utility-types_03.problem.function-utilities",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

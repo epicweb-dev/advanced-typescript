@@ -1,0 +1,7 @@
+{
+  "name": "exercises_01.promises_01.solution.creation",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "exercises_06.code-organization_01.problem.boundaries",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

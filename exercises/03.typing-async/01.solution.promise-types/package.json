@@ -1,0 +1,7 @@
+{
+  "name": "exercises_03.typing-async_01.solution.promise-types",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

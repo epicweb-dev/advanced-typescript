@@ -1,0 +1,7 @@
+{
+  "name": "exercises_09.conditional-types_01.solution.basic-conditionals",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

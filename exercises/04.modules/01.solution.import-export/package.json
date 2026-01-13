@@ -1,0 +1,7 @@
+{
+  "name": "exercises_04.modules_01.solution.import-export",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

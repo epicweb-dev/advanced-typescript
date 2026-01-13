@@ -1,0 +1,7 @@
+{
+  "name": "exercises_05.utility-types_01.solution.partial-pick",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

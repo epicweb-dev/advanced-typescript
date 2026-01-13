@@ -1,0 +1,7 @@
+{
+  "name": "exercises_08.mapped-types_01.problem.creating-mapped-types",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

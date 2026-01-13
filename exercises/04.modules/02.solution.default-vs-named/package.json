@@ -1,0 +1,7 @@
+{
+  "name": "exercises_04.modules_02.solution.default-vs-named",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}

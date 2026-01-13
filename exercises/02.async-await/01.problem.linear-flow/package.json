@@ -1,0 +1,7 @@
+{
+  "name": "exercises_02.async-await_01.problem.linear-flow",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts"
+  }
+}
