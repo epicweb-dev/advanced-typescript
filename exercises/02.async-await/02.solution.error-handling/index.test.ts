@@ -17,7 +17,7 @@ await test('fetchUser can resolve successfully', async () => {
 					name: 'Alice',
 					email: 'alice@example.com',
 				})
-			}, 1000)
+			}, 10)
 		})
 	}
 
@@ -62,7 +62,7 @@ await test('fetchUser can reject with an error', async () => {
 		return new Promise((resolve, reject) => {
 			setTimeout(() => {
 				reject(new Error('Failed to fetch user'))
-			}, 1000)
+			}, 10)
 		})
 	}
 
@@ -91,7 +91,7 @@ await test('loadUserData handles errors with try-catch', async () => {
 		return new Promise((resolve, reject) => {
 			setTimeout(() => {
 				reject(new Error('Failed to fetch user'))
-			}, 1000)
+			}, 10)
 		})
 	}
 
@@ -106,7 +106,7 @@ await test('loadUserData handles errors with try-catch', async () => {
 						total: 1299.99,
 					},
 				])
-			}, 500)
+			}, 10)
 		})
 	}
 

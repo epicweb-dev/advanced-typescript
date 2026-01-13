@@ -17,7 +17,7 @@ await test('fetchUser returns a Promise that resolves to a User object', async (
 					name: 'Alice',
 					email: 'alice@example.com',
 				})
-			}, 1000)
+			}, 10)
 		})
 	}
 

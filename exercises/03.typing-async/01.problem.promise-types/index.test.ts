@@ -17,7 +17,7 @@ await test('fetchUser returns a Promise that resolves to a User', async () => {
 					name: 'Alice',
 					email: 'alice@example.com',
 				})
-			}, 1000)
+			}, 10)
 		})
 	}
 
@@ -65,7 +65,7 @@ await test('fetchProducts returns a Promise that resolves to an array of Product
 					{ id: 'p1', name: 'Laptop', price: 999.99 },
 					{ id: 'p2', name: 'Mouse', price: 29.99 },
 				])
-			}, 500)
+			}, 10)
 		})
 	}
 
@@ -114,7 +114,7 @@ await test('loadData function loads both user and products', async () => {
 					name: 'Alice',
 					email: 'alice@example.com',
 				})
-			}, 1000)
+			}, 10)
 		})
 	}
 
@@ -125,7 +125,7 @@ await test('loadData function loads both user and products', async () => {
 					{ id: 'p1', name: 'Laptop', price: 999.99 },
 					{ id: 'p2', name: 'Mouse', price: 29.99 },
 				])
-			}, 500)
+			}, 10)
 		})
 	}
 

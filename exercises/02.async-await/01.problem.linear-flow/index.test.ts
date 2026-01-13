@@ -17,7 +17,7 @@ await test('fetchUser resolves to a User object', async () => {
 					name: 'Alice',
 					email: 'alice@example.com',
 				})
-			}, 1000)
+			}, 10)
 		})
 	}
 
@@ -70,7 +70,7 @@ await test('fetchOrders resolves to an array of Order objects', async () => {
 						total: 1299.99,
 					},
 				])
-			}, 500)
+			}, 10)
 		})
 	}
 
@@ -124,7 +124,7 @@ await test('loadUserData function loads user and orders sequentially', async () 
 					name: 'Alice',
 					email: 'alice@example.com',
 				})
-			}, 1000)
+			}, 10)
 		})
 	}
 
@@ -139,7 +139,7 @@ await test('loadUserData function loads user and orders sequentially', async () 
 						total: 1299.99,
 					},
 				])
-			}, 500)
+			}, 10)
 		})
 	}
 
