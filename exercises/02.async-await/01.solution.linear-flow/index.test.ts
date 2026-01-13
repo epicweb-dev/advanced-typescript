@@ -21,12 +21,12 @@ await testStep('fetchUser resolves to a User object', async () => {
 	}
 
 	const user = await fetchUser()
-	expect(user).toHaveProperty('id')
-	expect(user).toHaveProperty('name')
-	expect(user).toHaveProperty('email')
-	expect(user.id).toBe('1')
-	expect(user.name).toBe('Alice')
-	expect(user.email).toBe('alice@example.com')
+	expect(user, '🚨 user should have an id property - make sure you await the async function').toHaveProperty('id')
+	expect(user, '🚨 user should have a name property - make sure you await the async function').toHaveProperty('name')
+	expect(user, '🚨 user should have an email property - make sure you await the async function').toHaveProperty('email')
+	expect(user.id, '🚨 user.id should be "1" - check your async function return value').toBe('1')
+	expect(user.name, '🚨 user.name should be "Alice" - check your async function return value').toBe('Alice')
+	expect(user.email, '🚨 user.email should be "alice@example.com" - check your async function return value').toBe('alice@example.com')
 })
 
 await testStep('fetchOrders resolves to an array of Order objects', async () => {
@@ -53,12 +53,12 @@ await testStep('fetchOrders resolves to an array of Order objects', async () => 
 	}
 
 	const orders = await fetchOrders('1')
-	expect(Array.isArray(orders)).toBe(true)
-	expect(orders.length).toBeGreaterThan(0)
-	expect(orders[0]).toHaveProperty('id')
-	expect(orders[0]).toHaveProperty('userId')
-	expect(orders[0]).toHaveProperty('items')
-	expect(orders[0]).toHaveProperty('total')
+	expect(Array.isArray(orders), '🚨 orders should be an array - make sure you await the async function').toBe(true)
+	expect(orders.length, '🚨 orders should have at least one item - check your async function return value').toBeGreaterThan(0)
+	expect(orders[0], '🚨 orders[0] should have an id property - check your async function return value').toHaveProperty('id')
+	expect(orders[0], '🚨 orders[0] should have a userId property - check your async function return value').toHaveProperty('userId')
+	expect(orders[0], '🚨 orders[0] should have an items property - check your async function return value').toHaveProperty('items')
+	expect(orders[0], '🚨 orders[0] should have a total property - check your async function return value').toHaveProperty('total')
 })
 
 await testStep('loadUserData function loads user and orders sequentially', async () => {
@@ -109,6 +109,6 @@ await testStep('loadUserData function loads user and orders sequentially', async
 	}
 
 	const result = await loadUserData()
-	expect(result.user.id).toBe('1')
-	expect(result.orders[0].userId).toBe(result.user.id)
+	expect(result.user.id, '🚨 result.user.id should be "1" - use await to get user data sequentially').toBe('1')
+	expect(result.orders[0].userId, '🚨 result.orders[0].userId should match result.user.id - await fetchOrders after fetchUser').toBe(result.user.id)
 })

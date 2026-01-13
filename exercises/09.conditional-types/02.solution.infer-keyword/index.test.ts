@@ -9,7 +9,7 @@ await testStep('MyReturnType extracts return type from function', () => {
 
 	const fn: Fn1 = (a: string, b: number) => a.length > b
 	const result: R1 = fn('hello', 3)
-	expect(result).toBe(true)
+	expect(result, '🚨 result should be true - use infer R in conditional type T extends (...args: any[]) => infer R ? R : never').toBe(true)
 })
 
 await testStep('MyParameters extracts parameter types from function', () => {
@@ -21,7 +21,7 @@ await testStep('MyParameters extracts parameter types from function', () => {
 	const fn: Fn1 = (a: string, b: number) => a.length > b
 	const params: P1 = ['hello', 5]
 	const result = fn(...params)
-	expect(result).toBe(false)
+	expect(result, '🚨 result should be false - use infer P in conditional type T extends (...args: infer P) => any ? P : never').toBe(false)
 })
 
 await testStep('PromiseValue extracts resolved type from Promise', async () => {
@@ -35,7 +35,7 @@ await testStep('PromiseValue extracts resolved type from Promise', async () => {
 	}
 
 	const result: V1 = await fn()
-	expect(result).toBe('resolved')
+	expect(result, '🚨 result should be "resolved" - use infer U in conditional type T extends Promise<infer U> ? U : T').toBe('resolved')
 })
 
 await testStep('FirstArg extracts first parameter type', () => {
@@ -45,7 +45,7 @@ await testStep('FirstArg extracts first parameter type', () => {
 	type F1 = FirstArg<Fn3>
 
 	const fn: Fn3 = (x: { id: string }, y: number[], z: boolean) => {
-		expect(x.id).toBe('1')
+		expect(x.id, '🚨 x.id should be "1" - use infer F in conditional type T extends (first: infer F, ...rest: any[]) => any ? F : never').toBe('1')
 	}
 
 	const firstArg: F1 = { id: '1' }
@@ -59,7 +59,7 @@ await testStep('LastArg extracts last parameter type', () => {
 	type L1 = LastArg<Fn3>
 
 	const fn: Fn3 = (x: { id: string }, y: number[], z: boolean) => {
-		expect(z).toBe(true)
+		expect(z, '🚨 z should be true - use infer L in conditional type T extends (...args: [...any[], infer L]) => any ? L : never').toBe(true)
 	}
 
 	const lastArg: L1 = true
@@ -83,6 +83,6 @@ await testStep('logResult wrapper preserves function types', () => {
 	}
 
 	const result = logResult(add, 5, 3)
-	expect(result).toBe(8)
-	expect(typeof result).toBe('number')
+	expect(result, '🚨 result should be 8 - combine MyParameters<T> and MyReturnType<T> to preserve function types').toBe(8)
+	expect(typeof result, '🚨 typeof result should be "number" - infer keyword extracts types from function signatures').toBe('number')
 })

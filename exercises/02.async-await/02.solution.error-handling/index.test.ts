@@ -21,12 +21,12 @@ await testStep('fetchUser can resolve successfully', async () => {
 	}
 
 	const user = await fetchUser()
-	expect(user).toHaveProperty('id')
-	expect(user).toHaveProperty('name')
-	expect(user).toHaveProperty('email')
-	expect(user.id).toBe('1')
-	expect(user.name).toBe('Alice')
-	expect(user.email).toBe('alice@example.com')
+	expect(user, '🚨 user should have an id property - make sure you await the Promise').toHaveProperty('id')
+	expect(user, '🚨 user should have a name property - make sure you await the Promise').toHaveProperty('name')
+	expect(user, '🚨 user should have an email property - make sure you await the Promise').toHaveProperty('email')
+	expect(user.id, '🚨 user.id should be "1" - check your Promise resolve value').toBe('1')
+	expect(user.name, '🚨 user.name should be "Alice" - check your Promise resolve value').toBe('Alice')
+	expect(user.email, '🚨 user.email should be "alice@example.com" - check your Promise resolve value').toBe('alice@example.com')
 })
 
 await testStep('fetchUser can reject with an error', async () => {
@@ -44,7 +44,7 @@ await testStep('fetchUser can reject with an error', async () => {
 		})
 	}
 
-	await expect(fetchUser()).rejects.toThrow('Failed to fetch user')
+	await expect(fetchUser(), '🚨 fetchUser should reject with "Failed to fetch user" - use reject() in your Promise').rejects.toThrow('Failed to fetch user')
 })
 
 await testStep('loadUserData handles errors with try-catch', async () => {
@@ -95,6 +95,6 @@ await testStep('loadUserData handles errors with try-catch', async () => {
 	}
 
 	const result = await loadUserData()
-	expect(result).toHaveProperty('error')
-	expect((result as { error: string }).error).toBe('Failed to fetch user')
+	expect(result, '🚨 result should have an error property - use try/catch to handle Promise rejection').toHaveProperty('error')
+	expect((result as { error: string }).error, '🚨 result.error should be "Failed to fetch user" - catch the error and return it').toBe('Failed to fetch user')
 })

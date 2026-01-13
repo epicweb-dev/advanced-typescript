@@ -15,8 +15,8 @@ await testStep('MyPartial makes all properties optional', () => {
 
 	type PartialUser = MyPartial<User>
 	const partial: PartialUser = { name: 'Alice' }
-	expect(partial.name).toBe('Alice')
-	expect(partial.id).toBeUndefined()
+	expect(partial.name, '🚨 partial.name should be "Alice" - use mapped type [K in keyof T]?: T[K] to make properties optional').toBe('Alice')
+	expect(partial.id, '🚨 partial.id should be undefined - the ? modifier makes all properties optional').toBeUndefined()
 })
 
 await testStep('MyRequired makes all properties required', () => {
@@ -38,8 +38,8 @@ await testStep('MyRequired makes all properties required', () => {
 		email: 'a@b.com',
 		age: 30,
 	}
-	expect(required.id).toBe('1')
-	expect(required.name).toBe('Alice')
+	expect(required.id, '🚨 required.id should be "1" - use [K in keyof T]-?: T[K] to remove optional modifier').toBe('1')
+	expect(required.name, '🚨 required.name should be "Alice" - the -? modifier removes optionality').toBe('Alice')
 })
 
 await testStep('Nullable makes all properties nullable', () => {
@@ -61,9 +61,9 @@ await testStep('Nullable makes all properties nullable', () => {
 		email: null,
 		age: 30,
 	}
-	expect(nullable.id).toBeNull()
-	expect(nullable.name).toBe('Bob')
-	expect(nullable.email).toBeNull()
+	expect(nullable.id, '🚨 nullable.id should be null - use [K in keyof T]: T[K] | null to make all properties nullable').toBeNull()
+	expect(nullable.name, '🚨 nullable.name should be "Bob" - mapped types can transform property types').toBe('Bob')
+	expect(nullable.email, '🚨 nullable.email should be null - union with null makes properties nullable').toBeNull()
 })
 
 await testStep('Mutable removes readonly modifier', () => {
@@ -86,7 +86,7 @@ await testStep('Mutable removes readonly modifier', () => {
 		age: 25,
 	}
 	mutable.name = 'Updated'
-	expect(mutable.name).toBe('Updated')
+	expect(mutable.name, '🚨 mutable.name should be "Updated" - use -readonly modifier to remove readonly').toBe('Updated')
 })
 
 await testStep('Stringify converts all properties to strings', () => {
@@ -108,6 +108,6 @@ await testStep('Stringify converts all properties to strings', () => {
 		email: 'a@b.com',
 		age: '30',
 	}
-	expect(stringUser.age).toBe('30')
-	expect(typeof stringUser.age).toBe('string')
+	expect(stringUser.age, '🚨 stringUser.age should be "30" - use [K in keyof T]: string to convert all properties to string').toBe('30')
+	expect(typeof stringUser.age, '🚨 typeof stringUser.age should be "string" - mapped types can transform all property types').toBe('string')
 })

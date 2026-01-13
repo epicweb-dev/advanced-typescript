@@ -21,13 +21,13 @@ await testStep('fetchUser returns a Promise that resolves to a User object', asy
 	}
 
 	const userPromise = fetchUser()
-	expect(userPromise).toBeInstanceOf(Promise)
+	expect(userPromise, '🚨 fetchUser should return a Promise - use new Promise()').toBeInstanceOf(Promise)
 
 	const user = await userPromise
-	expect(user).toHaveProperty('id')
-	expect(user).toHaveProperty('name')
-	expect(user).toHaveProperty('email')
-	expect(user.id).toBe('1')
-	expect(user.name).toBe('Alice')
-	expect(user.email).toBe('alice@example.com')
+	expect(user, '🚨 user should have an id property - check your Promise resolve value').toHaveProperty('id')
+	expect(user, '🚨 user should have a name property - check your Promise resolve value').toHaveProperty('name')
+	expect(user, '🚨 user should have an email property - check your Promise resolve value').toHaveProperty('email')
+	expect(user.id, '🚨 user.id should be "1" - check your Promise resolve value').toBe('1')
+	expect(user.name, '🚨 user.name should be "Alice" - check your Promise resolve value').toBe('Alice')
+	expect(user.email, '🚨 user.email should be "alice@example.com" - check your Promise resolve value').toBe('alice@example.com')
 })
