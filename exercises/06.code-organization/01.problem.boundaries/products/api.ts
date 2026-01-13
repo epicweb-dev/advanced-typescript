@@ -1,1 +1,1 @@
-// 🐨 Import Product from './types' and export fetchProduct function here
+// 🐨 Import Product from './types.ts' and export fetchProduct function here

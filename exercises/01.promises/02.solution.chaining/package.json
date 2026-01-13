@@ -2,6 +2,7 @@
   "name": "exercises_01.promises_02.solution.chaining",
   "type": "module",
   "scripts": {
-    "start": "node index.ts"
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
   }
 }

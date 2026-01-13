@@ -1,4 +1,4 @@
-import { type Product } from './types'
+import { type Product } from './types.ts'
 
 export async function fetchProduct(id: string): Promise<Product> {
 	return new Promise((resolve) => {

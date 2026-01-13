@@ -1,7 +1,7 @@
 // Module Boundaries
 
-import { Product, fetchProduct } from './products'
-import { User, fetchUser } from './users'
+import { type Product, fetchProduct } from './products/index.ts'
+import { type User, fetchUser } from './users/index.ts'
 
 async function loadData() {
 	const user = await fetchUser('1')

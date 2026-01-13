@@ -2,6 +2,7 @@
   "name": "exercises_03.typing-async_01.problem.promise-types",
   "type": "module",
   "scripts": {
-    "start": "node index.ts"
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
   }
 }

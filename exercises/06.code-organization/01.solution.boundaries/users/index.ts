@@ -1,2 +1,2 @@
-export * from './types'
-export * from './api'
+export type { User } from './types.ts'
+export { fetchUser } from './api.ts'

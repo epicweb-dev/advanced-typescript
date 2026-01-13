@@ -1,6 +1,6 @@
 // Import and Export
 
-import { type User, type Product } from './types'
+import { type User, type Product } from './types.ts'
 
 function displayUser(user: User) {
 	console.log(`User: ${user.name} (${user.email})`)

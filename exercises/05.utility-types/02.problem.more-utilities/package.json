@@ -2,6 +2,7 @@
   "name": "exercises_05.utility-types_02.problem.more-utilities",
   "type": "module",
   "scripts": {
-    "start": "node index.ts"
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
   }
 }

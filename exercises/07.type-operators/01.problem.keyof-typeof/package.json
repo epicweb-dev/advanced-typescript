@@ -2,6 +2,7 @@
   "name": "exercises_07.type-operators_01.problem.keyof-typeof",
   "type": "module",
   "scripts": {
-    "start": "node index.ts"
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
   }
 }

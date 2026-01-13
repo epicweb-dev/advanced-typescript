@@ -14,8 +14,8 @@ type Product = {
 
 // 🐨 Create a new file `types.ts` and move the User and Product types there
 //    Export them using named exports: export type User = { ... }
-//    Then import them here: import { User, Product } from './types'
-// 💰 import { User, Product } from './types'
+//    Then import them here: import { User, Product } from './types.ts'
+// 💰 import { User, Product } from './types.ts'
 
 function displayUser(user: User) {
 	console.log(`User: ${user.name} (${user.email})`)

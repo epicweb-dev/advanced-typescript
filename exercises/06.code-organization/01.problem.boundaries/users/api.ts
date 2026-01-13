@@ -1,1 +1,1 @@
-// 🐨 Import User from './types' and export fetchUser function here
+// 🐨 Import User from './types.ts' and export fetchUser function here
