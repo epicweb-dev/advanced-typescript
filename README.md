@@ -32,10 +32,12 @@
 
 ## Prerequisites
 
-- [Programming Foundations](https://github.com/epicweb-dev/programming-foundations) workshop
+- [Programming Foundations](https://github.com/epicweb-dev/programming-foundations)
+  workshop
 - [Structured Data](https://github.com/epicweb-dev/structured-data) workshop
 - [Type Safety](https://github.com/epicweb-dev/type-safety) workshop
-- [Object-Oriented TypeScript](https://github.com/epicweb-dev/object-oriented-typescript) workshop (or equivalent knowledge)
+- [Object-Oriented TypeScript](https://github.com/epicweb-dev/object-oriented-typescript)
+  workshop (or equivalent knowledge)
 - Solid understanding of generics and type annotations
 
 ## Pre-workshop Resources
