@@ -36,6 +36,3 @@ function processData(data: string[], options: { limit: number }): number {
 // const params: CreateUserParams = ['Alice', 'alice@example.com', 30]
 // const user = loggedCreateUser(...params)
 // console.log('Created user:', user)
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

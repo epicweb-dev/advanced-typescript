@@ -38,6 +38,3 @@ type ReadonlyUser = {
 
 // const partial: PartialUser = { name: 'Alice' }  // Other props optional
 // const nullable: NullableUser = { id: null, name: 'Bob', email: null, age: null }
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

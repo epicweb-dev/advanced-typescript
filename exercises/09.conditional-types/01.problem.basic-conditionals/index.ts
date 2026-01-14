@@ -24,6 +24,3 @@
 // type T5 = Flatten<string[]>       // string
 // type T6 = Flatten<number>         // number
 // type T7 = MyNonNullable<string | null>  // string
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

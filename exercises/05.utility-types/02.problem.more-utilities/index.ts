@@ -41,6 +41,3 @@ type Status = 'pending' | 'active' | 'inactive' | 'deleted' | null | undefined
 // const newUser: UserWithoutId = { name: 'Bob', email: 'b@b.com' }
 // const fullUser: RequiredUser = { id: '1', name: 'A', email: 'a@b.com', bio: 'Hi', website: 'x.com' }
 // let status: ValidStatus = 'active'  // null and undefined not allowed
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

@@ -49,6 +49,3 @@ const user: UserType = {
 	profile: { avatar: 'url', bio: 'bio' },
 }
 console.log('User:', user)
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

@@ -21,6 +21,3 @@ function fetchUser(): Promise<User> {
 void fetchUser().then((user) => {
 	console.log('User fetched:', user)
 })
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

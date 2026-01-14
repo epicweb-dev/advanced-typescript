@@ -47,6 +47,3 @@ function fetchOrders(userId: string): Promise<Order[]> {
 
 // 🐨 Call the async function
 // 💰 loadUserData()
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}

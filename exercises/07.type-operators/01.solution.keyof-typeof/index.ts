@@ -43,6 +43,3 @@ function makeRequest(method: HttpMethod, url: string) {
 }
 makeRequest('GET', '/api/users') // ✅
 // makeRequest('PATCH', '/api')  // ❌ Error: 'PATCH' not in HttpMethod
-
-// 🦺 This line ensures TypeScript treats this as a module
-export {}
