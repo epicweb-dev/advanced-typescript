@@ -39,3 +39,6 @@ const product: Product = {
 
 displayUser(user)
 displayProduct(product)
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

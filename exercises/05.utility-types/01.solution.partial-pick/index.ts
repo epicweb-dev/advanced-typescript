@@ -42,3 +42,6 @@ const updated3 = updateUser(user, {
 // const updated4 = updateUser(user, { id: '2' })
 
 console.log(updated1, updated2, updated3)
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

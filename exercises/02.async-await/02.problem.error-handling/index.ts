@@ -59,3 +59,6 @@ async function loadUserData() {
 }
 
 void loadUserData()
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

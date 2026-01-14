@@ -50,3 +50,6 @@ async function loadData() {
 }
 
 void loadData()
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

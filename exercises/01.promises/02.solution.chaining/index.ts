@@ -51,3 +51,6 @@ fetchUser()
 	.catch((error) => {
 		console.error('Error:', error)
 	})
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

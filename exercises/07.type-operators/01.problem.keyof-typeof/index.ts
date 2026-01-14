@@ -38,3 +38,6 @@ const httpMethods = ['GET', 'POST', 'PUT', 'DELETE']
 // Test
 // const user: User = { id: '1', name: 'Alice', email: 'a@b.com', age: 30 }
 // console.log(getUserProperty(user, 'name'))
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

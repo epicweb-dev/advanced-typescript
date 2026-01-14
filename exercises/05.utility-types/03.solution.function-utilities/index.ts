@@ -49,3 +49,6 @@ function withLogging<T extends (...args: any[]) => any>(
 const loggedProcess = withLogging(processData)
 const result = loggedProcess(['a', 'b', 'c', 'd'], { limit: 2 })
 console.log('Process result:', result)
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

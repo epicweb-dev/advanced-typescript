@@ -43,3 +43,6 @@ type ApiResponse = {
 // Test by creating variables with these types
 // const profile: ProfileType = { avatar: 'url', bio: 'hello' }
 // const post: PostType = { id: '1', title: 'Hello', published: true }
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}

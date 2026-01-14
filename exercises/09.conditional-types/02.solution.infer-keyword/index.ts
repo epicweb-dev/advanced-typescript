@@ -46,3 +46,6 @@ function add(a: number, b: number): number {
 
 const result = logResult(add, 5, 3) // TypeScript knows result is number
 console.log('Final:', result)
+
+// 🦺 This line ensures TypeScript treats this as a module
+export {}
