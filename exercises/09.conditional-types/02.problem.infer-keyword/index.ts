@@ -31,5 +31,3 @@ type Fn3 = (x: { id: string }, y: number[], z: boolean) => void
 // type V2 = PromiseValue<number>           // number
 // type F1 = FirstArg<Fn1>       // string
 // type L1 = LastArg<Fn3>        // boolean
-
-export {}

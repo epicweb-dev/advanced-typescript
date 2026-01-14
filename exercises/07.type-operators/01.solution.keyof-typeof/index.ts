@@ -43,5 +43,3 @@ function makeRequest(method: HttpMethod, url: string) {
 }
 makeRequest('GET', '/api/users') // ✅
 // makeRequest('PATCH', '/api')  // ❌ Error: 'PATCH' not in HttpMethod
-
-export {}

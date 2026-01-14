@@ -49,5 +49,3 @@ const user: UserType = {
 	profile: { avatar: 'url', bio: 'bio' },
 }
 console.log('User:', user)
-
-export {}

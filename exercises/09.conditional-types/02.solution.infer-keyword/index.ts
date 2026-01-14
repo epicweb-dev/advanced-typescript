@@ -46,5 +46,3 @@ function add(a: number, b: number): number {
 
 const result = logResult(add, 5, 3) // TypeScript knows result is number
 console.log('Final:', result)
-
-export {}

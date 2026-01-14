@@ -35,5 +35,3 @@ const num = process(42) // number
 
 console.log('Array result:', arr)
 console.log('Number result:', num)
-
-export {}

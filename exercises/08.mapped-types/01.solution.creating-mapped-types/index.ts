@@ -58,5 +58,3 @@ console.log('Mutable:', mutable)
 // MutableUser allows reassignment (no readonly)
 mutable.name = 'Updated'
 console.log('After mutation:', mutable)
-
-export {}

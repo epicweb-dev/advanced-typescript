@@ -47,5 +47,3 @@ function fetchOrders(userId: string): Promise<Order[]> {
 
 // 🐨 Call the async function
 // 💰 loadUserData()
-
-export {}

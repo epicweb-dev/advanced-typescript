@@ -38,5 +38,3 @@ type ReadonlyUser = {
 
 // const partial: PartialUser = { name: 'Alice' }  // Other props optional
 // const nullable: NullableUser = { id: null, name: 'Bob', email: null, age: null }
-
-export {}

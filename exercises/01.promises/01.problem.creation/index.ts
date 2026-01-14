@@ -13,5 +13,3 @@ type User = {
 
 // 🐨 Call fetchUser and log the result when it resolves
 // 💰 fetchUser().then((user) => console.log(user))
-
-export {}

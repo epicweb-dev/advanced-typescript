@@ -51,5 +51,3 @@ fetchUser()
 	.catch((error) => {
 		console.error('Error:', error)
 	})
-
-export {}

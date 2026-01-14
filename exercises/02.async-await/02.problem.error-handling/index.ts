@@ -59,5 +59,3 @@ async function loadUserData() {
 }
 
 void loadUserData()
-
-export {}

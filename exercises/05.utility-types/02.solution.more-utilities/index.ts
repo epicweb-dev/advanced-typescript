@@ -52,5 +52,3 @@ console.log('Status:', status)
 let activeStatus: ActiveStatus = 'pending'
 // activeStatus = 'deleted'  // ❌ Error: Excluded
 console.log('Active status:', activeStatus)
-
-export {}

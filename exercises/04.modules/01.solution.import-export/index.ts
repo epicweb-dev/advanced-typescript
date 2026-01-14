@@ -24,5 +24,3 @@ const product: Product = {
 
 displayUser(user)
 displayProduct(product)
-
-export {}

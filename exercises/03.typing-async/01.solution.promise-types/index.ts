@@ -44,5 +44,3 @@ async function loadData() {
 }
 
 void loadData()
-
-export {}

@@ -21,5 +21,3 @@ function fetchUser(): Promise<User> {
 void fetchUser().then((user) => {
 	console.log('User fetched:', user)
 })
-
-export {}
