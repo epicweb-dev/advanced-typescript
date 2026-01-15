@@ -17,8 +17,15 @@ export type User = { ... }
 export type Product = { ... }
 
 // index.ts
-import { User, Product } from './types.ts'
+import { type User, type Product } from './types.ts'
 ```
+
+<callout-info>
+	When importing **types only** (not values), use `import { type X }` syntax.
+	This tells TypeScript (and Node.js) that these imports are purely for type
+	checking and should be erased at runtime. This is required when running
+	TypeScript natively with Node.js.
+</callout-info>
 
 📜 [MDN - ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 

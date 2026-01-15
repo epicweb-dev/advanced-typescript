@@ -8,7 +8,7 @@ async/await. This will make the code much more readable!
 1. Create an `async` function called `loadUserData`
 2. Use `await` to fetch the user
 3. Use `await` to fetch the orders
-4. Log both results
+4. Return an object with both `user` and `orders`
 
 💰 Async/await syntax:
 
@@ -16,7 +16,7 @@ async/await. This will make the code much more readable!
 async function loadUserData() {
 	const user = await fetchUser()
 	const orders = await fetchOrders(user.id)
-	console.log(user, orders)
+	return { user, orders }
 }
 ```
 
