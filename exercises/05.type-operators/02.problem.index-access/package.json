@@ -1,5 +1,5 @@
 {
-  "name": "exercises_07.type-operators_02.problem.index-access",
+  "name": "exercises_05.type-operators_02.problem.index-access",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

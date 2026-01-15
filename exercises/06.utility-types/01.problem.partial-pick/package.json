@@ -1,5 +1,5 @@
 {
-  "name": "exercises_05.utility-types_01.problem.partial-pick",
+  "name": "exercises_06.utility-types_01.problem.partial-pick",
   "type": "module",
   "scripts": {
     "start": "node index.ts",

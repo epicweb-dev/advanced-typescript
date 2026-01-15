@@ -1,5 +1,5 @@
 {
-  "name": "exercises_07.type-operators_01.solution.keyof-typeof",
+  "name": "exercises_05.type-operators_01.solution.keyof-typeof",
   "type": "module",
   "scripts": {
     "start": "node index.ts",
