@@ -40,13 +40,14 @@ function fetchOrders(userId: string): Promise<Order[]> {
 	})
 }
 
-// 🐨 Chain fetchUser() and fetchOrders() together
-//    First fetch the user, then fetch their orders using the user's id
-//    Log both the user and orders
-// 💰 fetchUser().then((user) => { ... return fetchOrders(user.id) }).then(...)
+// 🐨 Implement fetchUser() and fetchOrders() so they resolve with data
+// 💰 Use setTimeout to simulate async work
 
-// 🐨 Add error handling with .catch()
-// 💰 .catch((error) => console.error('Error:', error))
+// 🦉 Once both functions work, try chaining them in the playground:
+// fetchUser()
+// 	.then((user) => fetchOrders(user.id))
+// 	.then((orders) => console.log(orders))
+// 	.catch((error) => console.error('Error:', error))
 
 // 🐨 Export your functions so we can verify your work
 // 💰 export { fetchUser, fetchOrders }
