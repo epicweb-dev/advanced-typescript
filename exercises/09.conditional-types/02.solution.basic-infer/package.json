@@ -1,4 +1,8 @@
 {
-	"name": "basic-infer.solution",
-	"type": "module"
+  "name": "exercises_09.conditional-types_02.solution.basic-infer",
+  "type": "module",
+  "scripts": {
+    "start": "node index.ts",
+    "test": "node --test index.test.ts"
+  }
 }
