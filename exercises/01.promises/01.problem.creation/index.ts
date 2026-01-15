@@ -16,5 +16,5 @@ type User = {
 
 // 🐨 When you're done, uncomment this:
 // fetchUser().then((user) => {
-// 	console.log('Results JSON:', JSON.stringify(user))
+// 	console.log('Results:', JSON.stringify(user))
 // })

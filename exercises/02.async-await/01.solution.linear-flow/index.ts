@@ -48,7 +48,7 @@ async function loadUserData() {
 	console.log('Orders:', orders)
 
 	console.log(
-		'Results JSON:',
+		'Results:',
 		JSON.stringify({
 			user,
 			orders,

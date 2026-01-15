@@ -21,6 +21,8 @@ export default [
 			// we leave unused vars around for the exercises
 			'no-unused-vars': 'off',
 			'@typescript-eslint/no-unused-vars': 'off',
+			// don't bug them about this
+			'import/no-duplicates': 'off',
 		},
 	},
 ]

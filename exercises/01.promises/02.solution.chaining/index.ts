@@ -48,7 +48,7 @@ fetchUser()
 	.then((orders) => {
 		console.log('Orders:', orders)
 		console.log(
-			'Results JSON:',
+			'Results:',
 			JSON.stringify({
 				user: { id: '1', name: 'Alice', email: 'alice@example.com' },
 				orders,

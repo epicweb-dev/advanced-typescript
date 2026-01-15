@@ -20,5 +20,5 @@ function fetchUser(): Promise<User> {
 
 void fetchUser().then((user) => {
 	console.log('User fetched:', user)
-	console.log('Results JSON:', JSON.stringify(user))
+	console.log('Results:', JSON.stringify(user))
 })

@@ -74,7 +74,7 @@ const sampleOrders: Array<Order> = [
 ]
 
 console.log(
-	'Results JSON:',
+	'Results:',
 	JSON.stringify({
 		user: sampleUser,
 		orders: sampleOrders,

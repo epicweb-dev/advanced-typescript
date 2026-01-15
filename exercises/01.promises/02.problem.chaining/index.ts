@@ -53,7 +53,7 @@ function fetchOrders(userId: string): Promise<Order[]> {
 // 	.then((user) => fetchOrders(user.id).then((orders) => ({ user, orders })))
 // 	.then(({ user, orders }) => {
 // 		console.log(
-// 			'Results JSON:',
+// 			'Results:',
 // 			JSON.stringify({
 // 				user,
 // 				orders,

@@ -50,7 +50,7 @@ function fetchOrders(userId: string): Promise<Order[]> {
 
 // 🐨 When you're done, uncomment this inside loadUserData:
 // console.log(
-// 	'Results JSON:',
+// 	'Results:',
 // 	JSON.stringify({
 // 		user,
 // 		orders,
