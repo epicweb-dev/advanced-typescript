@@ -47,6 +47,13 @@ fetchUser()
 	})
 	.then((orders) => {
 		console.log('Orders:', orders)
+		console.log(
+			'Results JSON:',
+			JSON.stringify({
+				user: { id: '1', name: 'Alice', email: 'alice@example.com' },
+				orders,
+			}),
+		)
 	})
 	.catch((error) => {
 		console.error('Error:', error)

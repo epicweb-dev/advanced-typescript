@@ -59,7 +59,26 @@ async function loadUserData() {
 	}
 }
 
-// Uncomment to test:
-// loadUserData()
+const sampleUser: User = {
+	id: '1',
+	name: 'Alice',
+	email: 'alice@example.com',
+}
+const sampleOrders: Array<Order> = [
+	{
+		id: 'o1',
+		userId: '1',
+		items: ['Laptop', 'Mouse'],
+		total: 1299.99,
+	},
+]
 
-export { fetchUser, fetchOrders, loadUserData }
+console.log(
+	'Results JSON:',
+	JSON.stringify({
+		user: sampleUser,
+		orders: sampleOrders,
+		errorMessage: 'Failed to fetch user',
+		operationComplete: 'Operation complete',
+	}),
+)

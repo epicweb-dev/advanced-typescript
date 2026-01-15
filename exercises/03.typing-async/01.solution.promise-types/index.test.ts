@@ -1,27 +1,17 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { user, products } = JSON.parse(
+	jsonLine.replace('Results JSON:', '').trim(),
+)
 
 await test('fetchUser returns a Promise that resolves to a User', async () => {
-	type User = {
-		id: string
-		name: string
-		email: string
-	}
-
-	async function fetchUser(): Promise<User> {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				resolve({
-					id: '1',
-					name: 'Alice',
-					email: 'alice@example.com',
-				})
-			}, 10)
-		})
-	}
-
-	const user = await fetchUser()
 	assert.ok(
 		'id' in user,
 		'🚨 user should have an id property - make sure your async function returns Promise<User>',
@@ -52,24 +42,6 @@ await test('fetchUser returns a Promise that resolves to a User', async () => {
 })
 
 await test('fetchProducts returns a Promise that resolves to an array of Products', async () => {
-	type Product = {
-		id: string
-		name: string
-		price: number
-	}
-
-	async function fetchProducts(): Promise<Product[]> {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				resolve([
-					{ id: 'p1', name: 'Laptop', price: 999.99 },
-					{ id: 'p2', name: 'Mouse', price: 29.99 },
-				])
-			}, 10)
-		})
-	}
-
-	const products = await fetchProducts()
 	assert.strictEqual(
 		Array.isArray(products),
 		true,
@@ -94,55 +66,13 @@ await test('fetchProducts returns a Promise that resolves to an array of Product
 })
 
 await test('loadData function loads both user and products', async () => {
-	type User = {
-		id: string
-		name: string
-		email: string
-	}
-
-	type Product = {
-		id: string
-		name: string
-		price: number
-	}
-
-	async function fetchUser(): Promise<User> {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				resolve({
-					id: '1',
-					name: 'Alice',
-					email: 'alice@example.com',
-				})
-			}, 10)
-		})
-	}
-
-	async function fetchProducts(): Promise<Product[]> {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				resolve([
-					{ id: 'p1', name: 'Laptop', price: 999.99 },
-					{ id: 'p2', name: 'Mouse', price: 29.99 },
-				])
-			}, 10)
-		})
-	}
-
-	async function loadData() {
-		const user = await fetchUser()
-		const products = await fetchProducts()
-		return { user, products }
-	}
-
-	const result = await loadData()
 	assert.strictEqual(
-		result.user.id,
+		user.id,
 		'1',
 		'🚨 result.user.id should be "1" - make sure loadData returns an object with user and products',
 	)
 	assert.ok(
-		result.products.length > 0,
+		products.length > 0,
 		'🚨 result.products should have items - make sure loadData returns an object with user and products',
 	)
 })

@@ -46,6 +46,14 @@ async function loadUserData() {
 
 	const orders = await fetchOrders(user.id)
 	console.log('Orders:', orders)
+
+	console.log(
+		'Results JSON:',
+		JSON.stringify({
+			user,
+			orders,
+		}),
+	)
 }
 
 void loadUserData()

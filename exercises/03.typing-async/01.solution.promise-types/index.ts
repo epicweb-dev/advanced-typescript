@@ -41,6 +41,14 @@ async function loadData() {
 
 	console.log('User:', user)
 	console.log('Products:', products)
+
+	console.log(
+		'Results JSON:',
+		JSON.stringify({
+			user,
+			products,
+		}),
+	)
 }
 
 void loadData()

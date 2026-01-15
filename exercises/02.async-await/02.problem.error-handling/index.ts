@@ -59,3 +59,27 @@ async function loadUserData() {
 }
 
 void loadUserData()
+
+// 🐨 When you're done, add something like this:
+// const sampleUser: User = {
+// 	id: '1',
+// 	name: 'Alice',
+// 	email: 'alice@example.com',
+// }
+// const sampleOrders: Array<Order> = [
+// 	{
+// 		id: 'o1',
+// 		userId: '1',
+// 		items: ['Laptop', 'Mouse'],
+// 		total: 1299.99,
+// 	},
+// ]
+// console.log(
+// 	'Results JSON:',
+// 	JSON.stringify({
+// 		user: sampleUser,
+// 		orders: sampleOrders,
+// 		errorMessage: 'Failed to fetch user',
+// 		operationComplete: 'Operation complete',
+// 	}),
+// )

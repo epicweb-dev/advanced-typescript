@@ -1,27 +1,17 @@
 import assert from 'node:assert/strict'
+import { execSync } from 'node:child_process'
 import { test } from 'node:test'
-import './index.ts'
+
+const output = execSync('npm start --silent', { encoding: 'utf8' })
+const jsonLine = output
+	.split('\n')
+	.find((line) => line.startsWith('Results JSON:'))
+assert.ok(jsonLine, '🚨 Missing "Results JSON:" output line')
+const { user, orders } = JSON.parse(
+	jsonLine.replace('Results JSON:', '').trim(),
+)
 
 await test('fetchUser resolves to a User object', async () => {
-	type User = {
-		id: string
-		name: string
-		email: string
-	}
-
-	function fetchUser(): Promise<User> {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				resolve({
-					id: '1',
-					name: 'Alice',
-					email: 'alice@example.com',
-				})
-			}, 10)
-		})
-	}
-
-	const user = await fetchUser()
 	assert.ok(
 		'id' in user,
 		'🚨 user should have an id property - make sure you await the async function',
@@ -52,29 +42,6 @@ await test('fetchUser resolves to a User object', async () => {
 })
 
 await test('fetchOrders resolves to an array of Order objects', async () => {
-	type Order = {
-		id: string
-		userId: string
-		items: string[]
-		total: number
-	}
-
-	function fetchOrders(userId: string): Promise<Order[]> {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				resolve([
-					{
-						id: 'o1',
-						userId,
-						items: ['Laptop', 'Mouse'],
-						total: 1299.99,
-					},
-				])
-			}, 10)
-		})
-	}
-
-	const orders = await fetchOrders('1')
 	assert.strictEqual(
 		Array.isArray(orders),
 		true,
@@ -103,61 +70,14 @@ await test('fetchOrders resolves to an array of Order objects', async () => {
 })
 
 await test('loadUserData function loads user and orders sequentially', async () => {
-	type User = {
-		id: string
-		name: string
-		email: string
-	}
-
-	type Order = {
-		id: string
-		userId: string
-		items: string[]
-		total: number
-	}
-
-	function fetchUser(): Promise<User> {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				resolve({
-					id: '1',
-					name: 'Alice',
-					email: 'alice@example.com',
-				})
-			}, 10)
-		})
-	}
-
-	function fetchOrders(userId: string): Promise<Order[]> {
-		return new Promise((resolve) => {
-			setTimeout(() => {
-				resolve([
-					{
-						id: 'o1',
-						userId,
-						items: ['Laptop', 'Mouse'],
-						total: 1299.99,
-					},
-				])
-			}, 10)
-		})
-	}
-
-	async function loadUserData() {
-		const user = await fetchUser()
-		const orders = await fetchOrders(user.id)
-		return { user, orders }
-	}
-
-	const result = await loadUserData()
 	assert.strictEqual(
-		result.user.id,
+		user.id,
 		'1',
 		'🚨 result.user.id should be "1" - use await to get user data sequentially',
 	)
 	assert.strictEqual(
-		result.orders[0].userId,
-		result.user.id,
+		orders[0].userId,
+		user.id,
 		'🚨 result.orders[0].userId should match result.user.id - await fetchOrders after fetchUser',
 	)
 })
