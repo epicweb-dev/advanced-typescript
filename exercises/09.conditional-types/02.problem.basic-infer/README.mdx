@@ -1,0 +1,47 @@
+# Introduction to infer
+
+👨‍💼 The `infer` keyword is one of TypeScript's most powerful features. It lets
+you **extract types from within other types**.
+
+Think of `infer` as declaring a type variable that TypeScript fills in by
+pattern matching:
+
+```ts
+// "If T is an array of something, call that something E"
+type ElementType<T> = T extends Array<infer E> ? E : never
+
+type A = ElementType<Array<string>> // string - TypeScript inferred E = string
+type B = ElementType<Array<number>> // number - TypeScript inferred E = number
+type C = ElementType<string> // never - string isn't an array
+```
+
+The pattern is always:
+
+```
+T extends SomePattern<infer X> ? X : Fallback
+```
+
+Where `infer X` captures the type at that position.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Create `ArrayElement<T>` to extract element types from arrays
+2. Create `PromiseResult<T>` to extract resolved types from Promises
+3. Create `FunctionReturn<T>` to extract return types from functions
+
+💰 Basic `infer` patterns:
+
+```ts
+// Array element
+T extends Array<infer E> ? E : never
+
+// Promise value
+T extends Promise<infer U> ? U : T
+
+// Function return
+T extends (...args: any[]) => infer R ? R : never
+```
+
+📜 [TypeScript Handbook - Inferring Within Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)
+
+🐨 Once you've completed the exercise, run `node index.ts` in the playground to test your work!
