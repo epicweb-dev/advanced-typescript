@@ -49,3 +49,6 @@ const updated3 = updateUser(user, {
 // const updated4 = updateUser(user, { id: '2' })
 
 console.log(updated1, updated2, updated3)
+
+// 🐨 Export your function so we can verify your work
+// 💰 export { updateUser }

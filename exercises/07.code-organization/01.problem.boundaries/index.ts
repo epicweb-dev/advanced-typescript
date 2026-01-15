@@ -54,3 +54,6 @@ async function loadData() {
 }
 
 void loadData()
+
+// 🐨 Export your function so we can verify your work
+// 💰 export { loadData }

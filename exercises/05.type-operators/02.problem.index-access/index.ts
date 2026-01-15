@@ -40,6 +40,5 @@ type ApiResponse = {
 // 🐨 Create a type that is all possible value types of UserType
 // 💰 type UserValues = UserType[keyof UserType]
 
-// Test by creating variables with these types
-// const profile: ProfileType = { avatar: 'url', bio: 'hello' }
-// const post: PostType = { id: '1', title: 'Hello', published: true }
+// 🐨 Export your test values so we can verify your work
+// 💰 export { profile, post, user }

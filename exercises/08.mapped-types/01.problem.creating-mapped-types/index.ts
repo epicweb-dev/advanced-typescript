@@ -36,5 +36,5 @@ type ReadonlyUser = {
 // type MutableUser = Mutable<ReadonlyUser>
 // type StringUser = Stringify<User>
 
-// const partial: PartialUser = { name: 'Alice' }  // Other props optional
-// const nullable: NullableUser = { id: null, name: 'Bob', email: null, age: null }
+// 🐨 Export your test values so we can verify your work
+// 💰 export { partial, nullable, mutable }

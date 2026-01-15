@@ -39,3 +39,6 @@ const product: Product = {
 
 displayUser(user)
 displayProduct(product)
+
+// 🐨 Export your functions so we can verify your work
+// 💰 export { displayUser, displayProduct }

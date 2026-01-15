@@ -1,18 +1,16 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import './index.ts'
+import * as solution from './index.ts'
+
+await test('process is exported', () => {
+	assert.ok(
+		'process' in solution,
+		'🚨 Make sure you export "process" - add: export { process }',
+	)
+})
 
 await test('Flatten extracts element type from arrays', () => {
-	type Flatten<T> = T extends Array<infer U> ? U : T
-
-	function process<T>(value: T): Flatten<T> {
-		if (Array.isArray(value)) {
-			return value[0]
-		}
-		return value as Flatten<T>
-	}
-
-	const arr = process([1, 2, 3])
+	const arr = solution.process([1, 2, 3])
 	assert.strictEqual(
 		arr,
 		1,
@@ -24,7 +22,7 @@ await test('Flatten extracts element type from arrays', () => {
 		'🚨 typeof arr should be "number" - conditional types check if T extends Array',
 	)
 
-	const num = process(42)
+	const num = solution.process(42)
 	assert.strictEqual(
 		num,
 		42,
@@ -37,49 +35,15 @@ await test('Flatten extracts element type from arrays', () => {
 	)
 })
 
-await test('MyNonNullable removes null and undefined', () => {
-	type MyNonNullable<T> = T extends null | undefined ? never : T
-
-	function filterNonNull<T>(value: T): MyNonNullable<T> {
-		if (value === null || value === undefined) {
-			throw new Error('Value cannot be null or undefined')
-		}
-		return value as MyNonNullable<T>
-	}
-
-	const result = filterNonNull('hello')
-	assert.strictEqual(
-		result,
-		'hello',
-		'🚨 result should be "hello" - use conditional type T extends null | undefined ? never : T to remove null/undefined',
-	)
-
-	const numResult = filterNonNull(42)
-	assert.strictEqual(
-		numResult,
-		42,
-		'🚨 numResult should be 42 - conditional types exclude null and undefined',
-	)
-})
-
 await test('process function handles arrays and non-arrays', () => {
-	type Flatten<T> = T extends Array<infer U> ? U : T
-
-	function process<T>(value: T): Flatten<T> {
-		if (Array.isArray(value)) {
-			return value[0]
-		}
-		return value as Flatten<T>
-	}
-
-	const stringArray = process(['a', 'b', 'c'])
+	const stringArray = solution.process(['a', 'b', 'c'])
 	assert.strictEqual(
 		stringArray,
 		'a',
 		'🚨 stringArray should be "a" - conditional type extracts element type from arrays',
 	)
 
-	const numberValue = process(100)
+	const numberValue = solution.process(100)
 	assert.strictEqual(
 		numberValue,
 		100,

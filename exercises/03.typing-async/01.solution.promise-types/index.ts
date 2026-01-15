@@ -38,17 +38,7 @@ async function fetchProducts(): Promise<Array<Product>> {
 async function loadData() {
 	const user = await fetchUser()
 	const products = await fetchProducts()
-
-	console.log('User:', user)
-	console.log('Products:', products)
-
-	console.log(
-		'Results:',
-		JSON.stringify({
-			user,
-			products,
-		}),
-	)
+	return { user, products }
 }
 
-void loadData()
+export { fetchUser, fetchProducts, loadData }

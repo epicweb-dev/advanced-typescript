@@ -40,6 +40,9 @@ const age = getUserProperty(user, 'age') // number
 // HttpMethod is a union of literals, not just string
 function makeRequest(method: HttpMethod, url: string) {
 	console.log(`${method} ${url}`)
+	return `${method} ${url}`
 }
 makeRequest('GET', '/api/users') // ✅
 // makeRequest('PATCH', '/api')  // ❌ Error: 'PATCH' not in HttpMethod
+
+export { getUserProperty, makeRequest, config, httpMethods }

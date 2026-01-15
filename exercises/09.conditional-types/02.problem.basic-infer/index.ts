@@ -32,3 +32,6 @@ type Users = Array<{ id: string; name: string }>
 
 // type R1 = FunctionReturn<() => string>     // string
 // type R2 = FunctionReturn<(x: number) => boolean>  // boolean
+
+// 🐨 Export your function so we can verify your work
+// 💰 export { fetchUser }

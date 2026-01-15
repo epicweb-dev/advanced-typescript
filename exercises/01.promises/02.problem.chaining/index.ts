@@ -48,16 +48,5 @@ function fetchOrders(userId: string): Promise<Order[]> {
 // 🐨 Add error handling with .catch()
 // 💰 .catch((error) => console.error('Error:', error))
 
-// 🐨 When you're done, uncomment this:
-// fetchUser()
-// 	.then((user) => fetchOrders(user.id).then((orders) => ({ user, orders })))
-// 	.then(({ user, orders }) => {
-// 		console.log(
-// 			'Results:',
-// 			JSON.stringify({
-// 				user,
-// 				orders,
-// 			}),
-// 		)
-// 	})
-// 	.catch((error) => console.error('Error:', error))
+// 🐨 Export your functions so we can verify your work
+// 💰 export { fetchUser, fetchOrders }

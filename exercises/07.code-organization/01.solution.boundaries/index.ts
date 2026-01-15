@@ -9,6 +9,10 @@ async function loadData() {
 
 	console.log('User:', user)
 	console.log('Product:', product)
+
+	return { user, product }
 }
 
 void loadData()
+
+export { loadData }

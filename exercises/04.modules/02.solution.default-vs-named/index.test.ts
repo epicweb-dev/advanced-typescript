@@ -1,16 +1,24 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import './index.ts'
+import * as solution from './index.ts'
+
+await test('formatCurrency, formatDate, and Formatter are exported', () => {
+	assert.ok(
+		'formatCurrency' in solution,
+		'🚨 Make sure you export "formatCurrency" - add: export { formatCurrency, formatDate, Formatter }',
+	)
+	assert.ok(
+		'formatDate' in solution,
+		'🚨 Make sure you export "formatDate" - add: export { formatCurrency, formatDate, Formatter }',
+	)
+	assert.ok(
+		'Formatter' in solution,
+		'🚨 Make sure you export "Formatter" - add: export { formatCurrency, formatDate, Formatter }',
+	)
+})
 
 await test('formatCurrency formats numbers as currency', () => {
-	function formatCurrency(amount: number): string {
-		return new Intl.NumberFormat('en-US', {
-			style: 'currency',
-			currency: 'USD',
-		}).format(amount)
-	}
-
-	const result = formatCurrency(99.99)
+	const result = solution.formatCurrency(99.99)
 	assert.strictEqual(
 		result,
 		'$99.99',
@@ -19,13 +27,9 @@ await test('formatCurrency formats numbers as currency', () => {
 })
 
 await test('formatDate formats dates correctly', () => {
-	function formatDate(date: Date): string {
-		return new Intl.DateTimeFormat('en-US').format(date)
-	}
-
 	// Use explicit time to avoid timezone issues
 	const date = new Date(2024, 0, 15, 12, 0, 0)
-	const result = formatDate(date)
+	const result = solution.formatDate(date)
 	assert.ok(
 		/1\/15\/2024/.test(result),
 		'🚨 result should match "1/15/2024" - import formatDate correctly (default vs named export)',
@@ -33,20 +37,7 @@ await test('formatDate formats dates correctly', () => {
 })
 
 await test('Formatter class formats currency and dates', () => {
-	class Formatter {
-		formatCurrency(amount: number): string {
-			return new Intl.NumberFormat('en-US', {
-				style: 'currency',
-				currency: 'USD',
-			}).format(amount)
-		}
-
-		formatDate(date: Date): string {
-			return new Intl.DateTimeFormat('en-US').format(date)
-		}
-	}
-
-	const formatter = new Formatter()
+	const formatter = new solution.Formatter()
 	assert.strictEqual(
 		formatter.formatCurrency(199.99),
 		'$199.99',

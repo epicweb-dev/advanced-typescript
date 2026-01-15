@@ -48,14 +48,8 @@ async function loadData() {
 	console.log('User:', user)
 	console.log('Products:', products)
 
-	// 🐨 When you're done, uncomment this:
-	// console.log(
-	// 	'Results:',
-	// 	JSON.stringify({
-	// 		user,
-	// 		products,
-	// 	}),
-	// )
+	// 🐨 Export your functions so we can verify your work
+	// 💰 export { fetchUser, fetchProducts, loadData }
 }
 
 void loadData()

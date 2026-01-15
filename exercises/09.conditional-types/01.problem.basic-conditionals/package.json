@@ -2,7 +2,7 @@
   "name": "exercises_09.conditional-types_01.problem.basic-conditionals",
   "type": "module",
   "scripts": {
-    "start": "node index.ts",
+    "start": "npx @kentcdodds/log-module@latest ./index.ts",
     "test": "node --test index.test.ts"
   }
 }

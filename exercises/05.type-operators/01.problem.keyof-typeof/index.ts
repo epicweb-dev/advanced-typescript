@@ -35,6 +35,10 @@ const httpMethods = ['GET', 'POST', 'PUT', 'DELETE']
 // 🐨 Create a type `HttpMethod` from the array
 // 💰 type HttpMethod = (typeof httpMethods)[number]
 
-// Test
-// const user: User = { id: '1', name: 'Alice', email: 'a@b.com', age: 30 }
-// console.log(getUserProperty(user, 'name'))
+// 🐨 Create a function `makeRequest` that:
+// - Takes a method (constrained to HttpMethod) and url (string)
+// - Logs and returns a string like `${method} ${url}`
+// 💰 function makeRequest(method: HttpMethod, url: string) { ... }
+
+// 🐨 Export your functions and values so we can verify your work
+// 💰 export { getUserProperty, makeRequest, config, httpMethods }

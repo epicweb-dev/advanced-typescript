@@ -21,7 +21,7 @@ function fetchUser(): Promise<User> {
 				name: 'Alice',
 				email: 'alice@example.com',
 			})
-		}, 1000)
+		}, 10)
 	})
 }
 
@@ -36,25 +36,8 @@ function fetchOrders(userId: string): Promise<Array<Order>> {
 					total: 1299.99,
 				},
 			])
-		}, 500)
+		}, 10)
 	})
 }
 
-fetchUser()
-	.then((user) => {
-		console.log('User:', user)
-		return fetchOrders(user.id)
-	})
-	.then((orders) => {
-		console.log('Orders:', orders)
-		console.log(
-			'Results:',
-			JSON.stringify({
-				user: { id: '1', name: 'Alice', email: 'alice@example.com' },
-				orders,
-			}),
-		)
-	})
-	.catch((error) => {
-		console.error('Error:', error)
-	})
+export { fetchUser, fetchOrders }

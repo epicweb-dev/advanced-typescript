@@ -8,3 +8,5 @@ console.log(formatDate(new Date()))
 const formatter = new Formatter()
 console.log(formatter.formatCurrency(199.99))
 console.log(formatter.formatDate(new Date()))
+
+export { formatCurrency, formatDate, Formatter }

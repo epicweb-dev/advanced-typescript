@@ -24,3 +24,6 @@
 // type T5 = Flatten<string[]>       // string
 // type T6 = Flatten<number>         // number
 // type T7 = MyNonNullable<string | null>  // string
+
+// 🐨 Export your function so we can verify your work
+// 💰 export { process }

@@ -14,7 +14,5 @@ type User = {
 // 🐨 Call fetchUser and log the result when it resolves
 // 💰 fetchUser().then((user) => console.log(user))
 
-// 🐨 When you're done, uncomment this:
-// fetchUser().then((user) => {
-// 	console.log('Results:', JSON.stringify(user))
-// })
+// 🐨 Export your function so we can verify your work
+// 💰 export { fetchUser }

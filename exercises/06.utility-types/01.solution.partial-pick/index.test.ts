@@ -1,6 +1,13 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import './index.ts'
+import * as solution from './index.ts'
+
+await test('updateUser is exported', () => {
+	assert.ok(
+		'updateUser' in solution,
+		'🚨 Make sure you export "updateUser" - add: export { updateUser }',
+	)
+})
 
 await test('updateUser function updates user with partial data', () => {
 	type User = {
@@ -11,12 +18,6 @@ await test('updateUser function updates user with partial data', () => {
 		createdAt: Date
 	}
 
-	type UserUpdate = Partial<Pick<User, 'name' | 'email'>>
-
-	function updateUser(user: User, updates: UserUpdate) {
-		return { ...user, ...updates }
-	}
-
 	const user: User = {
 		id: '1',
 		name: 'Alice',
@@ -25,7 +26,7 @@ await test('updateUser function updates user with partial data', () => {
 		createdAt: new Date(),
 	}
 
-	const updated1 = updateUser(user, { name: 'Alice Smith' })
+	const updated1 = solution.updateUser(user, { name: 'Alice Smith' })
 	assert.strictEqual(
 		updated1.name,
 		'Alice Smith',
@@ -42,7 +43,9 @@ await test('updateUser function updates user with partial data', () => {
 		'🚨 updated1.id should remain "1" - only name and email can be updated',
 	)
 
-	const updated2 = updateUser(user, { email: 'alice.smith@example.com' })
+	const updated2 = solution.updateUser(user, {
+		email: 'alice.smith@example.com',
+	})
 	assert.strictEqual(
 		updated2.email,
 		'alice.smith@example.com',
@@ -54,7 +57,7 @@ await test('updateUser function updates user with partial data', () => {
 		'🚨 updated2.name should remain "Alice" - Partial makes properties optional',
 	)
 
-	const updated3 = updateUser(user, {
+	const updated3 = solution.updateUser(user, {
 		name: 'Alice Smith',
 		email: 'alice.smith@example.com',
 	})

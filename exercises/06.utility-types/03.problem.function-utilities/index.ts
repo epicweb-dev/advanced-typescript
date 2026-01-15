@@ -32,7 +32,5 @@ function processData(data: string[], options: { limit: number }): number {
 //   return createUser(...args)
 // }
 
-// Test
-// const params: CreateUserParams = ['Alice', 'alice@example.com', 30]
-// const user = loggedCreateUser(...params)
-// console.log('Created user:', user)
+// 🐨 Export your function so we can verify your work
+// 💰 export { loggedCreateUser }

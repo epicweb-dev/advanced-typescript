@@ -48,11 +48,5 @@ function fetchOrders(userId: string): Promise<Order[]> {
 // 🐨 Call the async function
 // 💰 loadUserData()
 
-// 🐨 When you're done, uncomment this inside loadUserData:
-// console.log(
-// 	'Results:',
-// 	JSON.stringify({
-// 		user,
-// 		orders,
-// 	}),
-// )
+// 🐨 Export your function so we can verify your work
+// 💰 export { loadUserData }

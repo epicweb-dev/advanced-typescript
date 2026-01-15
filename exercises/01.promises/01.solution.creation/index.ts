@@ -14,11 +14,8 @@ function fetchUser(): Promise<User> {
 				name: 'Alice',
 				email: 'alice@example.com',
 			})
-		}, 1000)
+		}, 10)
 	})
 }
 
-void fetchUser().then((user) => {
-	console.log('User fetched:', user)
-	console.log('Results:', JSON.stringify(user))
-})
+export { fetchUser }

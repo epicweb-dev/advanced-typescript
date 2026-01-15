@@ -2,7 +2,7 @@
   "name": "exercises_07.code-organization_01.problem.boundaries",
   "type": "module",
   "scripts": {
-    "start": "node index.ts",
+    "start": "npx @kentcdodds/log-module@latest ./index.ts",
     "test": "node --test index.test.ts"
   }
 }

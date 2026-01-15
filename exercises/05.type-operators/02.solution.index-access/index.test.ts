@@ -1,70 +1,48 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import './index.ts'
+import * as solution from './index.ts'
+
+await test('profile, post, and user are exported', () => {
+	assert.ok(
+		'profile' in solution,
+		'🚨 Make sure you export "profile" - add: export { profile, post, user }',
+	)
+	assert.ok(
+		'post' in solution,
+		'🚨 Make sure you export "post" - add: export { profile, post, user }',
+	)
+	assert.ok(
+		'user' in solution,
+		'🚨 Make sure you export "user" - add: export { profile, post, user }',
+	)
+})
 
 await test('index access types extract nested types correctly', () => {
-	type ApiResponse = {
-		data: {
-			user: {
-				id: string
-				name: string
-				profile: {
-					avatar: string
-					bio: string
-				}
-			}
-			posts: Array<{
-				id: string
-				title: string
-				published: boolean
-			}>
-		}
-		status: number
-		error: string | null
-	}
-
-	type ProfileType = ApiResponse['data']['user']['profile']
-	const profile: ProfileType = {
-		avatar: 'https://example.com/avatar.jpg',
-		bio: 'Hello!',
-	}
 	assert.strictEqual(
-		profile.avatar,
+		solution.profile.avatar,
 		'https://example.com/avatar.jpg',
 		'🚨 profile.avatar should be "https://example.com/avatar.jpg" - use index access types ApiResponse["data"]["user"]["profile"]',
 	)
 	assert.strictEqual(
-		profile.bio,
+		solution.profile.bio,
 		'Hello!',
 		'🚨 profile.bio should be "Hello!" - index access extracts nested types',
 	)
 })
 
 await test('index access extracts array element types', () => {
-	type ApiResponse = {
-		data: {
-			posts: Array<{
-				id: string
-				title: string
-				published: boolean
-			}>
-		}
-	}
-
-	type PostType = ApiResponse['data']['posts'][number]
-	const post: PostType = { id: '1', title: 'Hello World', published: true }
 	assert.strictEqual(
-		post.id,
+		solution.post.id,
 		'1',
 		'🚨 post.id should be "1" - use [number] to extract array element type',
 	)
 	assert.strictEqual(
-		post.title,
+		solution.post.title,
 		'Hello World',
 		'🚨 post.title should be "Hello World" - index access with [number] gets element type',
 	)
 	assert.strictEqual(
-		post.published,
+		solution.post.published,
 		true,
 		'🚨 post.published should be true - [number] works with Array types',
 	)

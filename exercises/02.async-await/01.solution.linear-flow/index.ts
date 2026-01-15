@@ -42,18 +42,8 @@ function fetchOrders(userId: string): Promise<Array<Order>> {
 
 async function loadUserData() {
 	const user = await fetchUser()
-	console.log('User:', user)
-
 	const orders = await fetchOrders(user.id)
-	console.log('Orders:', orders)
-
-	console.log(
-		'Results:',
-		JSON.stringify({
-			user,
-			orders,
-		}),
-	)
+	return { user, orders }
 }
 
-void loadUserData()
+export { loadUserData }

@@ -44,3 +44,5 @@ type FetchUserResult = PromiseResult<ReturnType<typeof fetchUser>>
 console.log('ArrayElement<Array<number>>:', 'number')
 console.log('PromiseResult<Promise<string>>:', 'string')
 console.log('FunctionReturn<() => boolean>:', 'boolean')
+
+export { fetchUser }

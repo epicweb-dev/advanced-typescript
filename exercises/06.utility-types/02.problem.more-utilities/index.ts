@@ -35,9 +35,5 @@ type Status = 'pending' | 'active' | 'inactive' | 'deleted' | null | undefined
 // 🐨 Create a type StringStatus using Extract to keep only string types
 // 💰 type StringStatus = Extract<Status, string>
 
-// Test
-// const config: Config = { timeout: 5000, retries: 3 }
-// const readonlyUser: ReadonlyUser = { id: '1', name: 'Alice', email: 'a@b.com' }
-// const newUser: UserWithoutId = { name: 'Bob', email: 'b@b.com' }
-// const fullUser: RequiredUser = { id: '1', name: 'A', email: 'a@b.com', bio: 'Hi', website: 'x.com' }
-// let status: ValidStatus = 'active'  // null and undefined not allowed
+// 🐨 Export your test values so we can verify your work
+// 💰 export { config, readonlyUser, newUser, fullUser, status, activeStatus }
