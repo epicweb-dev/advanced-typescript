@@ -39,12 +39,7 @@ type Example2 = Last<['a', 'b']> // 'b'
 4. Create `FirstArg<T>` to get a function's first argument type
 5. Create `LastArg<T>` using rest tuple patterns
 
-💰 Rest tuple pattern:
-
-```ts
-// [...infer Rest, infer Last] matches a tuple, capturing all-but-last and last
-type LastElement<T> = T extends [...infer _, infer L] ? L : never
-```
+💰 Use rest tuple patterns with `infer` to capture the last element.
 
 📜 [TypeScript Handbook - Inferring Within Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)
 

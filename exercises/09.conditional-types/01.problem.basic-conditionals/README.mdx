@@ -10,17 +10,7 @@ conditions.
 3. Create a `Flatten<T>` that unwraps arrays
 4. Create `NonNullable<T>` from scratch
 
-💰 Conditional type syntax:
-
-```ts
-type Check<T> = T extends SomeType ? ResultIfTrue : ResultIfFalse
-```
-
-💰 Checking for arrays:
-
-```ts
-type IsArray<T> = T extends any[] ? true : false
-```
+💰 Conditional types pick one of two results based on `extends`.
 
 📜 [TypeScript Handbook - Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html)
 

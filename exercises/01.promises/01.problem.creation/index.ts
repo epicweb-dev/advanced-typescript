@@ -9,10 +9,10 @@ type User = {
 // 🐨 Create a function `fetchUser` that returns a Promise<User>
 //    The Promise should resolve after 1 second with a user object
 //    Use setTimeout to simulate the delay
-// 💰 new Promise((resolve) => { setTimeout(() => resolve(...), 1000) })
+// 💰 Use a Promise and setTimeout to resolve after a delay
 
 // 🐨 Call fetchUser and log the result when it resolves
-// 💰 fetchUser().then((user) => console.log(user))
+// 💰 Call fetchUser and log the resolved user
 
 // 🐨 Export your function so we can verify your work
-// 💰 export { fetchUser }
+// 💰 Export the function you created

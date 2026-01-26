@@ -9,16 +9,7 @@ things organized.
 2. Export them using named exports
 3. Import them in `index.ts`
 
-💰 Module syntax:
-
-```ts
-// types.ts
-export type User = { ... }
-export type Product = { ... }
-
-// index.ts
-import { type User, type Product } from './types.ts'
-```
+💰 Use named exports and import the types in `index.ts`.
 
 <callout-info>
 	When importing **types only** (not values), use `import { type X }` syntax.

@@ -1,7 +1,7 @@
 // Default vs Named Exports
 
 // 🐨 Export formatCurrency as a named export
-// 💰 export function formatCurrency(amount: number): string { ... }
+// 💰 Use a named export for formatCurrency
 
 export function formatCurrency(amount: number): string {
 	return new Intl.NumberFormat('en-US', {
@@ -16,7 +16,7 @@ export function formatDate(date: Date): string {
 }
 
 // 🐨 Export Formatter as the default export
-// 💰 export default class Formatter { ... }
+// 💰 Use a default export for Formatter
 
 export default class Formatter {
 	formatCurrency(amount: number): string {

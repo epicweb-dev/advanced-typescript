@@ -43,10 +43,10 @@ function fetchOrders(userId: string): Promise<Order[]> {
 // 🐨 Create an async function called `loadUserData`
 //    Use await to fetch the user, then fetch their orders
 //    Log both the user and orders
-// 💰 async function loadUserData() { const user = await fetchUser(); ... }
+// 💰 Use async/await to fetch the user, then orders
 
 // 🐨 Call the async function
-// 💰 loadUserData()
+// 💰 Call the async function to run it
 
 // 🐨 Export your function so we can verify your work
-// 💰 export { loadUserData }
+// 💰 Export the function you created

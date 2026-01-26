@@ -41,7 +41,7 @@ function fetchOrders(userId: string): Promise<Order[]> {
 }
 
 // 🐨 Implement fetchUser() and fetchOrders() so they resolve with data
-// 💰 Use setTimeout to simulate async work
+// 💰 Simulate async work with setTimeout
 
 // 🦉 Once both functions work, try chaining them in the playground:
 // fetchUser()
@@ -50,4 +50,4 @@ function fetchOrders(userId: string): Promise<Order[]> {
 // 	.catch((error) => console.error('Error:', error))
 
 // 🐨 Export your functions so we can verify your work
-// 💰 export { fetchUser, fetchOrders }
+// 💰 Export the functions you created

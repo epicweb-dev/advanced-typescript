@@ -29,18 +29,7 @@ Where `infer X` captures the type at that position.
 2. Create `PromiseResult<T>` to extract resolved types from Promises
 3. Create `FunctionReturn<T>` to extract return types from functions
 
-💰 Basic `infer` patterns:
-
-```ts
-// Array element
-T extends Array<infer E> ? E : never
-
-// Promise value
-T extends Promise<infer U> ? U : T
-
-// Function return
-T extends (...args: any[]) => infer R ? R : never
-```
+💰 Use `infer` inside conditional types to extract parts of a type.
 
 📜 [TypeScript Handbook - Inferring Within Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)
 

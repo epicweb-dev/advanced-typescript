@@ -14,19 +14,6 @@ essential when wrapping or transforming functions.
 3. Use `Awaited` to unwrap Promise types
 4. Create a wrapper function that preserves types
 
-💰 Function utility examples:
-
-```ts
-type Fn = (a: string, b: number) => boolean
-type R = ReturnType<Fn> // boolean
-type P = Parameters<Fn> // [a: string, b: number]
-```
-
-💰 Unwrapping promises:
-
-```ts
-type T = Awaited<Promise<string>> // string
-type T2 = Awaited<Promise<Promise<number>>> // number (recursive)
-```
+💰 Use ReturnType, Parameters, and Awaited to preserve function signatures.
 
 📜 [TypeScript Handbook - ReturnType](https://www.typescriptlang.org/docs/handbook/utility-types.html#returntypetype)

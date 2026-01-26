@@ -8,20 +8,6 @@ operations together using `.then()`.
 1. Implement `fetchUser` and `fetchOrders` so they resolve with data
 2. Export both functions
 
-💰 Promise chaining example (try this in the playground once your functions work):
-
-```ts
-fetchUser()
-	.then((user) => {
-		console.log(user)
-		return fetchOrders(user.id)
-	})
-	.then((orders) => {
-		console.log(orders)
-	})
-	.catch((error) => {
-		console.error('Error:', error)
-	})
-```
+💰 Chain the calls with `.then()` and handle errors with `.catch()`.
 
 📜 [MDN - Promise.prototype.then()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then)

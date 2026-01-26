@@ -1,3 +1,2 @@
 // 🐨 Create a barrel export that re-exports everything from types and api
-// 💰 export * from './types.ts'
-//    export * from './api'
+// 💰 Re-export both the types and API from this folder

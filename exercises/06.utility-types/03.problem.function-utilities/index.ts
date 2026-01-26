@@ -14,23 +14,20 @@ function processData(data: string[], options: { limit: number }): number {
 }
 
 // 🐨 Create a type `NewUser` using ReturnType<typeof createUser>
-// 💰 type NewUser = ReturnType<typeof createUser>
+// 💰 Use ReturnType on createUser
 
 // 🐨 Create a type `CreateUserParams` using Parameters<typeof createUser>
-// 💰 type CreateUserParams = Parameters<typeof createUser>
+// 💰 Use Parameters on createUser
 
 // 🐨 Create a type `FetchUserResult` using ReturnType and Awaited
-// 💰 type FetchUserResult = Awaited<ReturnType<typeof fetchUser>>
+// 💰 Combine Awaited with ReturnType for fetchUser
 
 // 🐨 Create a type `ProcessDataArgs` using Parameters
-// 💰 type ProcessDataArgs = Parameters<typeof processData>
+// 💰 Use Parameters on processData
 
 // 🐨 Create a wrapper function that logs calls to createUser
 // It should have the same parameters and return type as createUser
-// 💰 function loggedCreateUser(...args: CreateUserParams): NewUser {
-//   console.log('Creating user with:', args)
-//   return createUser(...args)
-// }
+// 💰 Match createUser's parameters and return type in the wrapper
 
 // 🐨 Export your function so we can verify your work
-// 💰 export { loggedCreateUser }
+// 💰 Export the function you created

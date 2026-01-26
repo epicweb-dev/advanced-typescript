@@ -1,12 +1,11 @@
 // Default vs Named Exports
 
 // 🐨 Import the named exports: formatCurrency and formatDate
-// 💰 import { formatCurrency, formatDate } from './utils'
+// 💰 Use a named import from './utils.ts'
 import { formatCurrency, formatDate } from './utils.ts'
 
 // 🐨 Import the default export: Formatter
-// 💰 import Formatter from './utils'
-//    Or: import { default as Formatter } from './utils'
+// 💰 Use a default import from './utils.ts'
 import Formatter from './utils.ts'
 
 console.log(formatCurrency(99.99))
@@ -17,4 +16,4 @@ console.log(formatter.formatCurrency(199.99))
 console.log(formatter.formatDate(new Date()))
 
 // 🐨 Export your imports so we can verify your work
-// 💰 export { formatCurrency, formatDate, Formatter }
+// 💰 Re-export the imported values

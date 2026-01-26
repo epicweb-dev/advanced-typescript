@@ -49,7 +49,7 @@ async function loadData() {
 	console.log('Products:', products)
 
 	// 🐨 Export your functions so we can verify your work
-	// 💰 export { fetchUser, fetchProducts, loadData }
+	// 💰 Export the functions you created
 }
 
 void loadData()

@@ -5,15 +5,15 @@
 
 // 🐨 Create ArrayElement<T> - extracts the element type from an array
 // If T is an array, extract its element type. Otherwise, return never.
-// 💰 type ArrayElement<T> = T extends Array<infer E> ? E : never
+// 💰 Use `infer` to extract the element type
 
 // 🐨 Create PromiseResult<T> - extracts the resolved type of a Promise
 // If T is a Promise, extract what it resolves to. Otherwise, return T as-is.
-// 💰 type PromiseResult<T> = T extends Promise<infer U> ? U : T
+// 💰 Use `infer` to extract the resolved type
 
 // 🐨 Create FunctionReturn<T> - extracts the return type of a function
 // If T is a function, extract its return type. Otherwise, return never.
-// 💰 type FunctionReturn<T> = T extends (...args: any[]) => infer R ? R : never
+// 💰 Use `infer` to extract the return type
 
 // Test types
 type Numbers = Array<number>
@@ -34,4 +34,4 @@ type Users = Array<{ id: string; name: string }>
 // type R2 = FunctionReturn<(x: number) => boolean>  // boolean
 
 // 🐨 Export your function so we can verify your work
-// 💰 export { fetchUser }
+// 💰 Export the function you created

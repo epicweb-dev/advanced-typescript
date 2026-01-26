@@ -9,31 +9,31 @@ type User = {
 }
 
 // 🐨 Create a type Config using Record<string, number>
-// 💰 type Config = Record<string, number>
+// 💰 Use Record with string keys and number values
 
 // 🐨 Create a type ReadonlyUser using Readonly<User>
-// 💰 type ReadonlyUser = Readonly<User>
+// 💰 Use Readonly to prevent mutation
 
 // 🐨 Create a type UserWithoutId using Omit<User, 'id'>
 //    This removes the id property
-// 💰 type UserWithoutId = Omit<User, 'id'>
+// 💰 Use Omit to remove the id field
 
 // 🐨 Create a type RequiredUser using Required<User>
 //    This makes bio and website required
-// 💰 type RequiredUser = Required<User>
+// 💰 Use Required to make optional fields required
 
 // Union type utilities
 type Status = 'pending' | 'active' | 'inactive' | 'deleted' | null | undefined
 
 // 🐨 Create a type ActiveStatus that excludes 'deleted' from Status
-// 💰 type ActiveStatus = Exclude<Status, 'deleted' | null | undefined>
+// 💰 Use Exclude to remove unwanted union members
 
 // 🐨 Create a type ValidStatus that is NonNullable<Status>
 //    This removes null and undefined
-// 💰 type ValidStatus = NonNullable<Status>
+// 💰 Use NonNullable to remove null and undefined
 
 // 🐨 Create a type StringStatus using Extract to keep only string types
-// 💰 type StringStatus = Extract<Status, string>
+// 💰 Use Extract to keep only string members
 
 // 🐨 Export your test values so we can verify your work
-// 💰 export { config, readonlyUser, newUser, fullUser, status, activeStatus }
+// 💰 Export the test values you created

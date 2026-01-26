@@ -10,14 +10,6 @@ async/await. This will make the code much more readable!
 3. Use `await` to fetch the orders
 4. Return an object with both `user` and `orders`
 
-💰 Async/await syntax:
-
-```ts
-async function loadUserData() {
-	const user = await fetchUser()
-	const orders = await fetchOrders(user.id)
-	return { user, orders }
-}
-```
+💰 Use `async` and `await` to write the promise flow in a linear style.
 
 📜 [MDN - async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)

@@ -9,21 +9,9 @@
 3. Create a `Nullable<T>` that makes all properties nullable
 4. Create a `Mutable<T>` that removes `readonly`
 
-💰 Basic mapped type:
+💰 Mapped types iterate over keys with `[K in keyof T]`.
 
-```ts
-type MyPartial<T> = {
-	[K in keyof T]?: T[K]
-}
-```
-
-💰 Removing modifiers with `-`:
-
-```ts
-type RemoveOptional<T> = {
-	[K in keyof T]-?: T[K]
-}
-```
+💰 You can remove modifiers like `?` and `readonly` with a `-` prefix.
 
 📜 [TypeScript Handbook - Mapped Types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html)
 

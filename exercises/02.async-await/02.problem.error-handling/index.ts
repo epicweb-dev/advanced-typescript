@@ -49,7 +49,7 @@ async function loadUserData() {
 	// 🐨 Wrap the async operations in a try block
 	//    Add a catch block to handle errors
 	//    Optionally add a finally block for cleanup
-	// 💰 try { ... } catch (error) { ... } finally { ... }
+// 💰 Use try/catch (and optionally finally) around the awaited calls
 
 	const user = await fetchUser()
 	console.log('User:', user)
@@ -61,4 +61,4 @@ async function loadUserData() {
 void loadUserData()
 
 // 🐨 Export your function so we can verify your work
-// 💰 export { loadUserData }
+// 💰 Export the function you created

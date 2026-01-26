@@ -9,15 +9,6 @@ exports. Let's understand when to use each.
 2. Export `formatDate` as a **named export**
 3. Export a `Formatter` class as the **default export**
 
-💰 Export syntax:
-
-```ts
-// Named exports
-export function formatCurrency(amount: number): string { ... }
-export function formatDate(date: Date): string { ... }
-
-// Default export
-export default class Formatter { ... }
-```
+💰 Named exports use `export` on each item; default exports use `export default`.
 
 📜 [MDN - Export](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)

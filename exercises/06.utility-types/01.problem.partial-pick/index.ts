@@ -10,15 +10,15 @@ type User = {
 
 // 🐨 Create a type PartialUser using Partial<User>
 //    This makes all properties optional
-// 💰 type PartialUser = Partial<User>
+// 💰 Use Partial to make all fields optional
 
 // 🐨 Create a type UserNameEmail using Pick<User, 'name' | 'email'>
 //    This selects only name and email properties
-// 💰 type UserNameEmail = Pick<User, 'name' | 'email'>
+// 💰 Use Pick to select only name and email
 
 // 🐨 Create a type UserUpdate that combines Partial and Pick
 //    It should allow updating only name and email, and both should be optional
-// 💰 type UserUpdate = Partial<Pick<User, 'name' | 'email'>>
+// 💰 Combine Partial and Pick for the update type
 
 // @ts-expect-error - 💣 remove this comment
 function updateUser(user: User, updates: UserUpdate) {
@@ -51,4 +51,4 @@ const updated3 = updateUser(user, {
 console.log(updated1, updated2, updated3)
 
 // 🐨 Export your function so we can verify your work
-// 💰 export { updateUser }
+// 💰 Export the function you created

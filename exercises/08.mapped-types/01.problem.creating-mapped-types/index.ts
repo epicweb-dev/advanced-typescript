@@ -18,13 +18,13 @@ type ReadonlyUser = {
 // type MyPartial<T> = { [K in keyof T]?: T[K] }
 
 // 🐨 Create MyRequired<T> - makes all properties required (removes ?)
-// 💰 Use -? to remove the optional modifier
+// 💰 Use modifier removal to make properties required
 
 // 🐨 Create Nullable<T> - makes all properties T[K] | null
 // type Nullable<T> = { [K in keyof T]: T[K] | null }
 
 // 🐨 Create Mutable<T> - removes readonly from all properties
-// 💰 Use -readonly
+// 💰 Remove the readonly modifier
 
 // 🐨 Create Stringify<T> - converts all property types to string
 // type Stringify<T> = { [K in keyof T]: string }
@@ -37,4 +37,4 @@ type ReadonlyUser = {
 // type StringUser = Stringify<User>
 
 // 🐨 Export your test values so we can verify your work
-// 💰 export { partial, nullable, mutable }
+// 💰 Export the test values you created

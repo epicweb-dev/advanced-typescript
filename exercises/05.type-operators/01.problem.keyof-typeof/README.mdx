@@ -9,24 +9,6 @@
 3. Combine `typeof` with `as const` for literal types
 4. Create type-safe accessor functions
 
-💰 `keyof` pattern:
-
-```ts
-type Keys = keyof SomeType
-```
-
-💰 `typeof` pattern:
-
-```ts
-const obj = { a: 1, b: 2 }
-type ObjType = typeof obj
-```
-
-💰 `as const` for literal types:
-
-```ts
-const statuses = ['pending', 'active', 'done'] as const
-type Status = (typeof statuses)[number] // 'pending' | 'active' | 'done'
-```
+💰 Use `keyof`, `typeof`, and `as const` to derive literal-safe types.
 
 📜 [TypeScript Handbook - Keyof](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html)

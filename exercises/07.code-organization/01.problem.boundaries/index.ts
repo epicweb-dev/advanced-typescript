@@ -42,8 +42,7 @@ async function fetchProduct(id: string): Promise<Product> {
 //    3. Create users/index.ts that exports everything from types and api
 //    4. Do the same for products
 //    5. Import from the new modules here
-// 💰 import { User, fetchUser } from './users'
-//    import { Product, fetchProduct } from './products'
+// 💰 Import the types and functions from the new modules
 
 async function loadData() {
 	const user = await fetchUser('1')
@@ -56,4 +55,4 @@ async function loadData() {
 void loadData()
 
 // 🐨 Export your function so we can verify your work
-// 💰 export { loadData }
+// 💰 Export the function you created

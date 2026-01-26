@@ -30,15 +30,13 @@ type ApiResponse = {
 // type ProfileType = ...
 
 // 🐨 Extract the type of a single post
-// 💰 Use [number] to get array element type
-// type PostType = ApiResponse['data']['posts'][number]
+// 💰 Use indexed access to get the array element type
 
 // 🐨 Extract just the string properties from ApiResponse
-// 💰 type StringProps = ApiResponse['error']
-// But what about multiple? Use union: ApiResponse['status' | 'error']
+// 💰 Use union index access for multiple properties
 
 // 🐨 Create a type that is all possible value types of UserType
-// 💰 type UserValues = UserType[keyof UserType]
+// 💰 Use `keyof` with index access
 
 // 🐨 Export your test values so we can verify your work
-// 💰 export { profile, post, user }
+// 💰 Export the test values you created

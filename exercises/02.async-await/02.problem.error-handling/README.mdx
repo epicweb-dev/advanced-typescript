@@ -9,20 +9,6 @@ failures gracefully.
 2. Add a `catch` block to handle errors
 3. Optionally add a `finally` block for cleanup
 
-💰 Error handling syntax:
-
-```ts
-async function loadUserData() {
-	try {
-		const user = await fetchUser()
-		const orders = await fetchOrders(user.id)
-		console.log(user, orders)
-	} catch (error) {
-		console.error('Failed to load data:', error)
-	} finally {
-		console.log('Cleanup complete')
-	}
-}
-```
+💰 Wrap awaited calls in a try/catch to handle failures.
 
 📜 [MDN - try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
