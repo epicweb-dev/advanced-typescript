@@ -7,14 +7,14 @@
 // type IsArray<T> = T extends any[] ? true : false
 
 // 🐨 Create IsFunction<T> - returns true if T is a function
-// 💰 Use a function type pattern in the conditional
+// 💰 Think about how to detect function types
 
 // 🐨 Create Flatten<T> - if T is an array, return element type; otherwise T
 // type Flatten<T> = T extends Array<???> ? ??? : T
-// 💰 Use `infer` to capture the element type
+// 💰 Extract the element type from the array
 
 // 🐨 Create MyNonNullable<T> - removes null and undefined from T
-// 💰 Exclude null and undefined with a conditional
+// 💰 Filter out nullish cases
 
 // Test your types
 // type T1 = IsString<string>        // true
@@ -26,4 +26,3 @@
 // type T7 = MyNonNullable<string | null>  // string
 
 // 🐨 Export your function so we can verify your work
-// 💰 Export the function you created

@@ -4,16 +4,16 @@
 // type MyReturnType<T> = T extends (...args: any[]) => infer R ? R : never
 
 // 🐨 Create MyParameters<T> - extracts function parameters as a tuple
-// 💰 Use `infer` to capture the parameter tuple
+// 💰 Capture the parameter tuple from a function type
 
 // 🐨 Create PromiseValue<T> - extracts the resolved type of a Promise
 // type PromiseValue<T> = T extends Promise<infer U> ? U : T
 
 // 🐨 Create FirstArg<T> - extracts just the first argument type
-// 💰 Use `infer` to capture the first argument type
+// 💰 Extract the first argument type
 
 // 🐨 Create LastArg<T> - extracts the last argument type
-// 💰 Use a rest tuple pattern with `infer` to capture the last argument
+// 💰 Extract the last argument type from a tuple
 
 // Test functions
 type Fn1 = (a: string, b: number) => boolean
@@ -31,4 +31,3 @@ type Fn3 = (x: { id: string }, y: number[], z: boolean) => void
 // type L1 = LastArg<Fn3>        // boolean
 
 // 🐨 Export your function so we can verify your work
-// 💰 Export the function you created
