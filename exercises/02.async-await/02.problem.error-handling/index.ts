@@ -9,7 +9,7 @@ type User = {
 type Order = {
 	id: string
 	userId: string
-	items: string[]
+	items: Array<string>
 	total: number
 }
 
@@ -30,7 +30,7 @@ function fetchUser(): Promise<User> {
 	})
 }
 
-function fetchOrders(userId: string): Promise<Order[]> {
+function fetchOrders(userId: string): Promise<Array<Order>> {
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve([
@@ -49,16 +49,16 @@ async function loadUserData() {
 	// 🐨 Wrap the async operations in a try block
 	//    Add a catch block to handle errors
 	//    Optionally add a finally block for cleanup
-// 💰 Use try/catch (and optionally finally) around the awaited calls
 
 	const user = await fetchUser()
-	console.log('User:', user)
+	// console.log('User:', user)
 
 	const orders = await fetchOrders(user.id)
-	console.log('Orders:', orders)
+	// console.log('Orders:', orders)
 }
 
 void loadUserData()
 
 // 🐨 Export your function so we can verify your work
-// 💰 Export the function you created
+
+// export { loadUserData }

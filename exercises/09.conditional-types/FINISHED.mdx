@@ -16,7 +16,7 @@ You learned:
 type NonNullable<T> = T extends null | undefined ? never : T
 
 // TypeScript's built-in ReturnType
-type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any
+type ReturnType<T> = T extends (...args: Array<any>) => infer R ? R : any
 
 // TypeScript's built-in Awaited
 type Awaited<T> = T extends Promise<infer U> ? Awaited<U> : T

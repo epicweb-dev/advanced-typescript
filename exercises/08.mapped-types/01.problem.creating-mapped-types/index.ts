@@ -35,3 +35,5 @@ type ReadonlyUser = {
 // type StringUser = Stringify<User>
 
 // 🐨 Export your test values so we can verify your work
+
+// export { partial, nullable, mutable }

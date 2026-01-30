@@ -10,7 +10,7 @@
 
 ```ts
 // Generic logging wrapper
-function withLogging<T extends (...args: any[]) => any>(
+function withLogging<T extends (...args: Array<any>) => any>(
 	fn: T,
 ): (...args: Parameters<T>) => ReturnType<T> {
 	return (...args) => {

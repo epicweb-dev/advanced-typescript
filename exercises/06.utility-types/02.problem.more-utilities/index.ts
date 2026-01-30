@@ -29,3 +29,5 @@ type Status = 'pending' | 'active' | 'inactive' | 'deleted' | null | undefined
 // 🐨 Create a type StringStatus using Extract to keep only string types
 
 // 🐨 Export your test values so we can verify your work
+
+// export { config, readonlyUser, newUser, fullUser, status, activeStatus }

@@ -4,7 +4,7 @@
 
 - `Array<infer E>` - Extract array element type
 - `Promise<infer U>` - Extract promise resolved type
-- `(...args: any[]) => infer R` - Extract function return type
+- `(...args: Array<any>) => infer R` - Extract function return type
 
 These patterns form the building blocks for TypeScript's built-in utility types
 like `ReturnType<T>` and `Awaited<T>`.

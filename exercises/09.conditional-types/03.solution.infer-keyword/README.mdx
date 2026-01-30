@@ -9,7 +9,9 @@
 type ComponentProps<T> = T extends React.ComponentType<infer P> ? P : never
 
 // Extract the type a function was called with
-type InstanceType<T> = T extends new (...args: any[]) => infer R ? R : never
+type InstanceType<T> = T extends new (...args: Array<any>) => infer R
+	? R
+	: never
 
 // Get all values from an object type
 type ValueOf<T> = T[keyof T]

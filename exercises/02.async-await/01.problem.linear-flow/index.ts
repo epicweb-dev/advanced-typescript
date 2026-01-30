@@ -9,7 +9,7 @@ type User = {
 type Order = {
 	id: string
 	userId: string
-	items: string[]
+	items: Array<string>
 	total: number
 }
 
@@ -25,7 +25,7 @@ function fetchUser(): Promise<User> {
 	})
 }
 
-function fetchOrders(userId: string): Promise<Order[]> {
+function fetchOrders(userId: string): Promise<Array<Order>> {
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve([
@@ -43,10 +43,9 @@ function fetchOrders(userId: string): Promise<Order[]> {
 // 🐨 Create an async function called `loadUserData`
 //    Use await to fetch the user, then fetch their orders
 //    Log both the user and orders
-// 💰 Use async/await to fetch the user, then orders
 
 // 🐨 Call the async function
-// 💰 Call the async function to run it
 
 // 🐨 Export your function so we can verify your work
-// 💰 Export the function you created
+
+// export { loadUserData }

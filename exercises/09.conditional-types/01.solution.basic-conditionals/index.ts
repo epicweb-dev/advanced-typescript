@@ -2,9 +2,9 @@
 
 type IsString<T> = T extends string ? true : false
 
-type IsArray<T> = T extends any[] ? true : false
+type IsArray<T> = T extends Array<any> ? true : false
 
-type IsFunction<T> = T extends (...args: any[]) => any ? true : false
+type IsFunction<T> = T extends (...args: Array<any>) => any ? true : false
 
 type Flatten<T> = T extends Array<infer U> ? U : T
 
@@ -13,13 +13,13 @@ type MyNonNullable<T> = T extends null | undefined ? never : T
 // Test the types
 type T1 = IsString<string> // true
 type T2 = IsString<number> // false
-type T3 = IsArray<string[]> // true
+type T3 = IsArray<Array<string>> // true
 type T4 = IsArray<string> // false
 type T5 = IsFunction<() => void> // true
 type T6 = IsFunction<string> // false
-type T7 = Flatten<string[]> // string
+type T7 = Flatten<Array<string>> // string
 type T8 = Flatten<number> // number
-type T9 = Flatten<number[][]> // number[] (only one level)
+type T9 = Flatten<Array<Array<number>>> // Array<number> (only one level)
 type T10 = MyNonNullable<string | null | undefined> // string
 
 // Practical usage

@@ -62,7 +62,7 @@ await test(
 		assert.strictEqual(
 			Array.isArray(products),
 			true,
-			'🚨 products should be an array - make sure your async function returns Promise<Product[]>',
+			'🚨 products should be an array - make sure your async function returns Promise<Array<Product>>',
 		)
 		assert.ok(
 			products.length > 0,

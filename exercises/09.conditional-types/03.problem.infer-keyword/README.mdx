@@ -7,13 +7,15 @@ patterns including function parameters and tuple manipulation.
 
 ```ts
 // Extract return type
-type ReturnType<T> = T extends (...args: any[]) => infer R ? R : never
+type ReturnType<T> = T extends (...args: Array<any>) => infer R ? R : never
 
 // Extract all parameters as a tuple
 type Parameters<T> = T extends (...args: infer P) => any ? P : never
 
 // Extract first parameter
-type FirstArg<T> = T extends (first: infer F, ...rest: any[]) => any ? F : never
+type FirstArg<T> = T extends (first: infer F, ...rest: Array<any>) => any
+	? F
+	: never
 ```
 
 ## Rest Patterns in Tuples
@@ -22,7 +24,7 @@ You can use `infer` with rest patterns (`...`) to extract parts of tuples:
 
 ```ts
 // Get the last element of a tuple
-type Last<T extends any[]> = T extends [...infer _, infer L] ? L : never
+type Last<T extends Array<any>> = T extends [...infer _, infer L] ? L : never
 
 // The [...infer _] captures "everything except the last" into _
 // The [infer L] captures the last element into L

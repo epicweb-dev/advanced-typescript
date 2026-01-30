@@ -37,7 +37,7 @@ const userAge: number = user.age
 console.log(`${userName} is ${userAge} years old`)
 
 // Generic wrapper function example
-function withLogging<T extends (...args: any[]) => any>(
+function withLogging<T extends (...args: Array<any>) => any>(
 	fn: T,
 ): (...args: Parameters<T>) => ReturnType<T> {
 	return (...args) => {

@@ -7,7 +7,7 @@ arrays:
 
 ```ts
 // Without as const
-const colors = ['red', 'blue'] // string[]
+const colors = ['red', 'blue'] // Array<string>
 type Color = (typeof colors)[number] // string 😢
 
 // With as const

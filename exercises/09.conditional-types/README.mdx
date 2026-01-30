@@ -23,7 +23,7 @@ T extends U ? TrueType : FalseType
 
 ```ts
 // Extract return type of a function
-type Return<T> = T extends (...args: any[]) => infer R ? R : never
+type Return<T> = T extends (...args: Array<any>) => infer R ? R : never
 
 // Unwrap a Promise
 type Unwrap<T> = T extends Promise<infer U> ? U : T

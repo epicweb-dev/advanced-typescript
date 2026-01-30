@@ -9,7 +9,7 @@ type User = {
 type Order = {
 	id: string
 	userId: string
-	items: string[]
+	items: Array<string>
 	total: number
 }
 
@@ -25,7 +25,7 @@ function fetchUser(): Promise<User> {
 	})
 }
 
-function fetchOrders(userId: string): Promise<Order[]> {
+function fetchOrders(userId: string): Promise<Array<Order>> {
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve([
@@ -41,7 +41,6 @@ function fetchOrders(userId: string): Promise<Order[]> {
 }
 
 // 🐨 Implement fetchUser() and fetchOrders() so they resolve with data
-// 💰 Simulate async work with setTimeout
 
 // 🦉 Once both functions work, try chaining them in the playground:
 // fetchUser()
@@ -50,4 +49,5 @@ function fetchOrders(userId: string): Promise<Order[]> {
 // 	.catch((error) => console.error('Error:', error))
 
 // 🐨 Export your functions so we can verify your work
-// 💰 Export the functions you created
+
+// export { fetchUser, fetchOrders }

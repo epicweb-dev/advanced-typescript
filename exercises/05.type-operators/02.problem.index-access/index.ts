@@ -30,13 +30,11 @@ type ApiResponse = {
 // type ProfileType = ...
 
 // 🐨 Extract the type of a single post
-// 💰 Use indexed access to get the array element type
 
 // 🐨 Extract just the string properties from ApiResponse
-// 💰 Use union index access for multiple properties
 
 // 🐨 Create a type that is all possible value types of UserType
-// 💰 Use `keyof` with index access
 
 // 🐨 Export your test values so we can verify your work
-// 💰 Export the test values you created
+
+// export { profile, post, user }

@@ -10,7 +10,7 @@ type ArrayElement<T> = T extends Array<infer E> ? E : never
 type PromiseResult<T> = T extends Promise<infer U> ? U : T
 
 // Extract the return type of a function
-type FunctionReturn<T> = T extends (...args: any[]) => infer R ? R : never
+type FunctionReturn<T> = T extends (...args: Array<any>) => infer R ? R : never
 
 // Test types
 type Numbers = Array<number>

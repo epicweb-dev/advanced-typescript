@@ -13,7 +13,7 @@ type Product = {
 }
 
 // 🐨 Add explicit return type annotations to these async functions
-//    Use Promise<User> and Promise<Product[]> respectively
+//    Use Promise<User> and Promise<Array<Product>> respectively
 // 🦺 async function fetchUser(): Promise<User> { ... }
 
 async function fetchUser() {
@@ -29,7 +29,7 @@ async function fetchUser() {
 }
 
 async function fetchProducts() {
-	return new Promise<Product[]>((resolve) => {
+	return new Promise<Array<Product>>((resolve) => {
 		setTimeout(() => {
 			resolve([
 				{ id: 'p1', name: 'Laptop', price: 999.99 },
@@ -45,11 +45,12 @@ async function loadData() {
 	const user = await fetchUser()
 	const products = await fetchProducts()
 
-	console.log('User:', user)
-	console.log('Products:', products)
+	// console.log('User:', user)
+	// console.log('Products:', products)
 
 	// 🐨 Export your functions so we can verify your work
-	// 💰 Export the functions you created
 }
+
+// export { fetchUser, fetchProducts, loadData }
 
 void loadData()
