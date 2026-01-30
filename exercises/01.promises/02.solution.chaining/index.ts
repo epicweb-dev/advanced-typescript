@@ -40,4 +40,10 @@ function fetchOrders(userId: string): Promise<Array<Order>> {
 	})
 }
 
-export { fetchUser, fetchOrders }
+function fetchUserAndOrders(): Promise<{ user: User; orders: Array<Order> }> {
+	return fetchUser().then((user) =>
+		fetchOrders(user.id).then((orders) => ({ user, orders })),
+	)
+}
+
+export { fetchUserAndOrders }

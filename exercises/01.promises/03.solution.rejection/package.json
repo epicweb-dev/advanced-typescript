@@ -1,0 +1,8 @@
+{
+  "name": "exercises_01.promises_03.solution.rejection",
+  "type": "module",
+  "scripts": {
+    "start": "npx @kentcdodds/log-module@latest ./index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

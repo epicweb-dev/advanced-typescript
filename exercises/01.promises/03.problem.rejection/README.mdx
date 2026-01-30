@@ -1,0 +1,16 @@
+# Handling Rejections
+
+👨‍💼 Our API sometimes fails, and we need to handle those failures gracefully.
+Rejected Promises should be caught so we can return a friendly error state.
+
+🐨 Open <InlineFile file="index.ts" /> and:
+
+1. Update `getUserProfile` to handle rejections with `.catch()`
+2. Return an error result when the Promise rejects
+3. Keep the `id` parameter flowing through both functions
+4. Export `fetchUser` and `getUserProfile`
+
+💰 For the error result, return a `{ status: 'error', message: string }` object.
+If the value isn't an `Error`, use `'Unknown error'` as the message.
+
+📜 [MDN - Promise.prototype.catch()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)

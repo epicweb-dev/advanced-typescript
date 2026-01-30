@@ -23,6 +23,7 @@ export default [
 			'@typescript-eslint/no-unused-vars': 'off',
 			// don't bug them about this
 			'import/no-duplicates': 'off',
+			'@typescript-eslint/no-floating-promises': 'off',
 		},
 	},
 ]
