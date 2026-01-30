@@ -1,5 +1,5 @@
 {
-  "name": "exercises_09.conditional-types_03.problem.infer-keyword",
+  "name": "exercises_06.conditional-types_03.problem.infer-keyword",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

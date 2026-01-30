@@ -1,5 +1,5 @@
 {
-  "name": "exercises_03.typing-async_01.problem.promise-types",
+  "name": "exercises_02.async-await_03.problem.promise-types",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

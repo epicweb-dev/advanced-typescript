@@ -1,5 +1,5 @@
 {
-  "name": "exercises_04.modules_01.problem.import-export",
+  "name": "exercises_03.modules_01.problem.import-export",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

@@ -1,5 +1,5 @@
 {
-  "name": "exercises_06.utility-types_03.problem.function-utilities",
+  "name": "exercises_05.utility-types_03.problem.function-utilities",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

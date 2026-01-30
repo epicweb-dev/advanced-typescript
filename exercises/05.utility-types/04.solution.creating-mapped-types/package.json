@@ -1,5 +1,5 @@
 {
-  "name": "exercises_08.mapped-types_01.solution.creating-mapped-types",
+  "name": "exercises_05.utility-types_04.solution.creating-mapped-types",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

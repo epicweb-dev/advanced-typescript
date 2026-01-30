@@ -1,5 +1,5 @@
 {
-  "name": "exercises_09.conditional-types_01.problem.basic-conditionals",
+  "name": "exercises_06.conditional-types_01.problem.basic-conditionals",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

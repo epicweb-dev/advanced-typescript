@@ -1,5 +1,5 @@
 {
-  "name": "exercises_05.type-operators_02.problem.index-access",
+  "name": "exercises_04.type-operators_02.problem.index-access",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",

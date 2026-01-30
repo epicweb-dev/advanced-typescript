@@ -1,5 +1,5 @@
 {
-  "name": "exercises_04.modules_02.solution.default-vs-named",
+  "name": "exercises_03.modules_02.solution.default-vs-named",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",
