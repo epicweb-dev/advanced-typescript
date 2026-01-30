@@ -3,6 +3,23 @@
 👨‍💼 There are two ways to export from modules: named exports and default
 exports. Let's understand when to use each.
 
+```ts
+// utils.ts
+export function formatDistance(meters: number) {
+	return `${meters}m`
+}
+
+export function formatDuration(seconds: number) {
+	return `${seconds}s`
+}
+
+export default class UnitFormatter {
+	formatDistance(meters: number) {
+		return formatDistance(meters)
+	}
+}
+```
+
 🐨 Open <InlineFile file="utils.ts" /> and:
 
 1. Export `formatCurrency` as a **named export**

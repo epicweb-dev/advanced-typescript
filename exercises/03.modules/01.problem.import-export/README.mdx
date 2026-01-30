@@ -3,6 +3,14 @@
 👨‍💼 Our code is getting large. Let's split it into separate modules to keep
 things organized.
 
+```ts
+// types.ts
+export type Book = { title: string; pages: number }
+
+// index.ts
+import { type Book } from './types.ts'
+```
+
 🐨 Create a new file `types.ts` and:
 
 1. Move the `User` and `Product` types to `types.ts`

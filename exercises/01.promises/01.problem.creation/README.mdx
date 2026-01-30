@@ -3,6 +3,15 @@
 👨‍💼 We need to simulate an API call that fetches user data. Let's create a
 Promise that resolves with user information after a delay.
 
+```ts
+type Forecast = { day: string; high: number }
+
+const fetchForecast = () =>
+	new Promise<Forecast>((resolve) => {
+		setTimeout(() => resolve({ day: 'Mon', high: 72 }), 500)
+	})
+```
+
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Create a `fetchUser` function that returns a `Promise<User>`

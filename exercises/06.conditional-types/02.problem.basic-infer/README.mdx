@@ -7,12 +7,12 @@ Think of `infer` as declaring a type variable that TypeScript fills in by
 pattern matching:
 
 ```ts
-// "If T is an array of something, call that something E"
-type ElementType<T> = T extends Array<infer E> ? E : never
+// "If T has a payload property, call that payload P"
+type PayloadType<T> = T extends { payload: infer P } ? P : never
 
-type A = ElementType<Array<string>> // string - TypeScript inferred E = string
-type B = ElementType<Array<number>> // number - TypeScript inferred E = number
-type C = ElementType<string> // never - string isn't an array
+type A = PayloadType<{ payload: 'ping' }> // 'ping'
+type B = PayloadType<{ payload: 42 }> // 42
+type C = PayloadType<string> // never - no payload to infer
 ```
 
 The pattern is always:

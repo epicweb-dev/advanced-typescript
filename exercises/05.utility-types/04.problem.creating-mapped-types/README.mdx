@@ -2,6 +2,16 @@
 
 👨‍💼 Let's build our own utility types using mapped types!
 
+```ts
+type Album = {
+	title: string
+	year: number
+}
+
+type Optional<T> = { [K in keyof T]?: T[K] }
+type OptionalAlbum = Optional<Album>
+```
+
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Recreate `Partial<T>` from scratch

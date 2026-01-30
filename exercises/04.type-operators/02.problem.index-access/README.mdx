@@ -4,11 +4,14 @@
 bracket notation.
 
 ```ts
-type User = { id: string; name: string; settings: { theme: 'light' | 'dark' } }
+type Recipe = {
+	title: string
+	author: { name: string; rating: 1 | 2 | 3 | 4 | 5 }
+}
 
-type IdType = User['id'] // string
-type SettingsType = User['settings'] // { theme: 'light' | 'dark' }
-type ThemeType = User['settings']['theme'] // 'light' | 'dark'
+type TitleType = Recipe['title'] // string
+type AuthorType = Recipe['author'] // { name: string; rating: 1 | 2 | 3 | 4 | 5 }
+type RatingType = Recipe['author']['rating'] // 1 | 2 | 3 | 4 | 5
 ```
 
 🐨 Open <InlineFile file="index.ts" /> and:

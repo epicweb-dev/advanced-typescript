@@ -3,6 +3,13 @@
 👨‍💼 Now that you understand basic `infer`, let's use it for more complex
 patterns including function parameters and tuple manipulation.
 
+```ts
+type SignalHandler = (signal: { type: 'tick' }, count: number) => string
+type HandlerResult<T> = T extends (...args: Array<any>) => infer R ? R : never
+
+type Result = HandlerResult<SignalHandler> // string
+```
+
 ## Function Patterns
 
 ```ts

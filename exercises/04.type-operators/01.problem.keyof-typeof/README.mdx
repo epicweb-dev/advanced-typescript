@@ -2,6 +2,18 @@
 
 👨‍💼 Let's use `keyof` and `typeof` to create type-safe utilities.
 
+```ts
+const palette = {
+	primary: '#222222',
+	accent: '#ff6600',
+}
+
+type PaletteKey = keyof typeof palette
+
+const sizes = ['sm', 'md', 'lg'] as const
+type Size = (typeof sizes)[number]
+```
+
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Use `keyof` to get the keys of an object type

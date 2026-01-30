@@ -3,6 +3,23 @@
 👨‍💼 After fetching a user, we need to fetch their orders. Let's chain these
 operations together using `.then()`.
 
+```ts
+type Playlist = { id: string; name: string }
+type Track = { id: string; title: string }
+
+function fetchPlaylist(): Promise<Playlist> {
+	return Promise.resolve({ id: 'pl1', name: 'Morning Mix' })
+}
+
+function fetchTracks(playlistId: string): Promise<Array<Track>> {
+	return Promise.resolve([{ id: `${playlistId}-t1`, title: 'Sunrise' }])
+}
+
+fetchPlaylist()
+	.then((playlist) => fetchTracks(playlist.id))
+	.then((tracks) => console.log(tracks))
+```
+
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Implement `fetchUser` and `fetchOrders` so they resolve with data

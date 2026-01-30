@@ -2,6 +2,16 @@
 
 👨‍💼 Let's explore more utility types for objects and union types.
 
+```ts
+type Shelf = Record<string, number>
+type LockedBook = Readonly<{ title: string; pages: number }>
+type BookPreview = Omit<{ id: string; title: string; summary: string }, 'id'>
+type FullBook = Required<{ title?: string; author?: string }>
+
+type Status = 'draft' | 'published' | null
+type PublishedOnly = Exclude<Status, 'draft' | null>
+```
+
 ## Object Utilities
 
 - **`Record<K, V>`** - Create object with keys K and values V

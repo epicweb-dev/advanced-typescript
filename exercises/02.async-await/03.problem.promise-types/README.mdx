@@ -3,6 +3,18 @@
 👨‍💼 Let's ensure our async functions have proper type annotations. This helps
 TypeScript catch errors and makes our code more maintainable.
 
+```ts
+type Episode = { id: string; title: string }
+
+async function fetchEpisode(): Promise<Episode> {
+	return { id: 'e1', title: 'Pilot' }
+}
+
+async function fetchEpisodeIds(): Promise<Array<string>> {
+	return ['e1', 'e2']
+}
+```
+
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Add explicit return type annotations to all async functions

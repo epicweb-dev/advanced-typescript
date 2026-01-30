@@ -3,6 +3,24 @@
 👨‍💼 Our async code needs proper error handling. Let's use try/catch to handle
 failures gracefully.
 
+```ts
+async function readConfig() {
+	if (Math.random() > 0.5) throw new Error('Missing config')
+	return { theme: 'dark' }
+}
+
+async function loadSettings() {
+	try {
+		const config = await readConfig()
+		return config
+	} catch (error) {
+		return { theme: 'light', error }
+	} finally {
+		// cleanup
+	}
+}
+```
+
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Wrap the async operations in a `try` block

@@ -3,6 +3,15 @@
 👨‍💼 TypeScript provides utilities for working with function types. These are
 essential when wrapping or transforming functions.
 
+```ts
+function scoreGame(points: number, bonus: boolean) {
+	return points + (bonus ? 10 : 0)
+}
+
+type ScoreResult = ReturnType<typeof scoreGame>
+type ScoreArgs = Parameters<typeof scoreGame>
+```
+
 - **`ReturnType<T>`** - Get the return type of a function
 - **`Parameters<T>`** - Get parameter types as a tuple
 - **`Awaited<T>`** - Unwrap Promise types

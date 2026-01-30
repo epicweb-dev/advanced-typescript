@@ -3,6 +3,25 @@
 👨‍💼 Let's convert the Promise chain from the previous exercise to use
 async/await. This will make the code much more readable!
 
+```ts
+type Recipe = { id: string; title: string }
+type Ingredient = { name: string }
+
+async function loadRecipe(id: string): Promise<Recipe> {
+	return { id, title: 'Pancakes' }
+}
+
+async function loadIngredients(recipeId: string): Promise<Array<Ingredient>> {
+	return [{ name: `${recipeId}-flour` }]
+}
+
+async function loadCookingData() {
+	const recipe = await loadRecipe('r1')
+	const ingredients = await loadIngredients(recipe.id)
+	return { recipe, ingredients }
+}
+```
+
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Create an `async` function called `loadUserData`

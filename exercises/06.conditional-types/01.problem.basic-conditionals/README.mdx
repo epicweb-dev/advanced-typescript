@@ -3,6 +3,14 @@
 👨‍💼 Let's create conditional types that check and transform based on type
 conditions.
 
+```ts
+type IsNumber<T> = T extends number ? true : false
+type UnwrapArray<T> = T extends Array<infer U> ? U : T
+
+type A = IsNumber<42> // true
+type B = UnwrapArray<Array<'x'>> // 'x'
+```
+
 🐨 Open <InlineFile file="index.ts" /> and:
 
 1. Create an `IsString<T>` type that returns `true` or `false`
