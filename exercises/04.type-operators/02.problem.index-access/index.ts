@@ -21,13 +21,10 @@ type ApiResponse = {
 }
 
 // 🐨 Extract the type of `data`
-// type DataType = ApiResponse['data']
 
 // 🐨 Extract the type of `user` from data
-// type UserType = ApiResponse['data']['user']
 
 // 🐨 Extract the type of `profile` from user
-// type ProfileType = ...
 
 // 🐨 Extract the type of a single post
 

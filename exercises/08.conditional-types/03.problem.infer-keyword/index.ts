@@ -1,12 +1,10 @@
 // Using the infer Keyword
 
 // 🐨 Create MyReturnType<T> - extracts the return type of a function
-// type MyReturnType<T> = T extends (...args: Array<any>) => infer R ? R : never
 
 // 🐨 Create MyParameters<T> - extracts function parameters as a tuple
 
 // 🐨 Create PromiseValue<T> - extracts the resolved type of a Promise
-// type PromiseValue<T> = T extends Promise<infer U> ? U : T
 
 // 🐨 Create FirstArg<T> - extracts just the first argument type
 

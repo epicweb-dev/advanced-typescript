@@ -1,15 +1,12 @@
 // Basic Conditional Types
 
 // 🐨 Create IsString<T> - returns true if T is string, false otherwise
-// type IsString<T> = T extends string ? true : false
 
 // 🐨 Create IsArray<T> - returns true if T is an array
-// type IsArray<T> = T extends Array<any> ? true : false
 
 // 🐨 Create IsFunction<T> - returns true if T is a function
 
 // 🐨 Create Flatten<T> - if T is an array, return element type; otherwise T
-// type Flatten<T> = T extends Array<???> ? ??? : T
 
 // 🐨 Create MyNonNullable<T> - removes null and undefined from T
 

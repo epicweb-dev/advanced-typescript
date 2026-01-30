@@ -15,17 +15,14 @@ type ReadonlyUser = {
 }
 
 // 🐨 Create MyPartial<T> - makes all properties optional
-// type MyPartial<T> = { [K in keyof T]?: T[K] }
 
 // 🐨 Create MyRequired<T> - makes all properties required (removes ?)
 
 // 🐨 Create Nullable<T> - makes all properties T[K] | null
-// type Nullable<T> = { [K in keyof T]: T[K] | null }
 
 // 🐨 Create Mutable<T> - removes readonly from all properties
 
 // 🐨 Create Stringify<T> - converts all property types to string
-// type Stringify<T> = { [K in keyof T]: string }
 
 // Test your types
 // type PartialUser = MyPartial<User>
