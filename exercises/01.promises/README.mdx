@@ -1,12 +1,106 @@
 # Promises
 
+## Async JavaScript Primer
+
+JavaScript runs your code on a single main thread. If a task takes time (like
+waiting for a network response, reading a file, or a timer), the language uses
+asynchronous APIs to keep the main thread free so the app can stay responsive.
+
+In practice, this means:
+
+- **Synchronous code** runs top to bottom and blocks until it finishes.
+- **Asynchronous code** starts work now and delivers results later.
+
+The call stack tracks which functions are currently running. Synchronous work
+stays on the call stack until it completes. Asynchronous work registers a
+callback, returns immediately, and the callback only runs later when the call
+stack is clear.
+
+If you want a visual to explore how promise chains behave over time, check out
+the Promisees playground at https://bevacqua.github.io/promisees/. It only runs
+JavaScript (not TypeScript), so paste the JavaScript version of the example
+below.
+
+```ts
+// Synchronous: runs in order, one step at a time.
+console.log('A')
+console.log('B')
+console.log('C')
+```
+
+```ts
+// Asynchronous: timer finishes later.
+console.log('Start')
+setTimeout(() => console.log('Later'), 0)
+console.log('End')
+// Output:
+// Start
+// End
+// Later
+```
+
+```ts
+// A promise represents "later".
+function getNumber() {
+	return new Promise<number>((resolve) => {
+		setTimeout(() => resolve(42), 100)
+	})
+}
+
+getNumber().then((value) => console.log('Value:', value))
+```
+
+```ts
+// Promises chain, so each step waits for the previous one.
+function fetchUser() {
+	return Promise.resolve({ id: 1, name: 'Alice' })
+}
+
+fetchUser()
+	.then((user) => user.name)
+	.then((name) => name.toUpperCase())
+	.then((upper) => console.log(upper))
+```
+
+```js
+// A longer chain you can tweak and observe over time.
+function getDelayedNumber(label, value, delay) {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			console.log(`${label}: ${value}`)
+			resolve(value)
+		}, delay)
+	})
+}
+
+getDelayedNumber('first', 2, 150)
+	.then((value) => getDelayedNumber('double', value * 2, 300))
+	.then((value) => getDelayedNumber('plus five', value + 5, 200))
+	.then((value) => getDelayedNumber('square', value * value, 250))
+	.then((value) => {
+		if (value > 100) {
+			throw new Error('Value is too large')
+		}
+		return getDelayedNumber('half', value / 2, 150)
+	})
+	.then((value) => console.log('final value', value))
+	.catch((error) => console.error('chain failed', error))
+```
+
+Try pasting that chain into the Promisees playground to see how each step
+waits, resolves, or throws as you tweak the delays and values.
+
+Promises are the standard way to represent that "later" value. You can attach
+handlers for success and failure, and you can combine multiple async operations
+without getting lost in nested callbacks.
+
 Promises are the foundation of asynchronous programming in JavaScript and
 TypeScript. They represent a value that will be available in the future—either
 a successful result or a failure.
 
 ```ts
 // A Promise that resolves to a string
-const fetchUser = (): Promise<string> => {
+function fetchUser(): Promise<string> {
 	return new Promise((resolve) => {
 		setTimeout(() => resolve('Alice'), 1000)
 	})

@@ -17,10 +17,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 function captureOutput() {
 	const output = []
 	return {
-		write: (chunk, streamType) => {
+		write(chunk, streamType) {
 			output.push({ chunk: chunk.toString(), streamType })
 		},
-		replay: () => {
+		replay() {
 			for (const { chunk, streamType } of output) {
 				if (streamType === 'stderr') {
 					process.stderr.write(chunk)
@@ -105,7 +105,7 @@ async function main() {
 			message: 'Select apps to test:',
 			choices: ['All', ...choices],
 			multiple: true,
-			suggest: (input, choices) => {
+			suggest(input, choices) {
 				return matchSorter(choices, input, { keys: ['name'] })
 			},
 		})
