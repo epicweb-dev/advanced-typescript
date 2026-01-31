@@ -1,0 +1,8 @@
+{
+  "name": "exercises_03.modules_03.solution.type-only-imports",
+  "type": "module",
+  "scripts": {
+    "start": "npx @kentcdodds/log-module@latest ./index.ts",
+    "test": "node --test index.test.ts"
+  }
+}

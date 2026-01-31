@@ -1,7 +1,7 @@
 # Linear Flow with Async/Await
 
-👨‍💼 Let's convert the Promise chain from the previous exercise to use
-async/await. This will make the code much more readable!
+👨‍💼 Let's refactor a Promise chain to use async/await. This will make the
+code much more readable!
 
 ```ts
 type Recipe = { id: string; title: string }
@@ -22,11 +22,7 @@ async function loadCookingData() {
 }
 ```
 
-🐨 Open <InlineFile file="index.ts" /> and:
-
-1. Create an `async` function called `loadUserData`
-2. Use `await` to fetch the user
-3. Use `await` to fetch the orders
-4. Return an object with both `user` and `orders`
+🐨 Open <InlineFile file="index.ts" /> and refactor `loadUserData` so it
+uses `async`/`await` instead of `.then()` chains.
 
 📜 [MDN - async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)

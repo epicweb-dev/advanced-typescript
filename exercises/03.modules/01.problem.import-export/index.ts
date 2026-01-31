@@ -1,39 +1,27 @@
 // Import and Export
 
-type User = {
-	id: string
-	name: string
-	email: string
-}
-
-type Product = {
-	id: string
-	name: string
-	price: number
-}
-
-// 🐨 Create a new file `types.ts` and move the User and Product types there
-//    Export them using named exports, then import them here
-
-function displayUser(user: User) {
+function displayUser(user: { name: string; email: string }) {
 	console.log(`User: ${user.name} (${user.email})`)
 }
 
-function displayProduct(product: Product) {
+function displayProduct(product: { name: string; price: number }) {
 	console.log(`Product: ${product.name} - $${product.price}`)
 }
 
-const user: User = {
+const user = {
 	id: '1',
 	name: 'Alice',
 	email: 'alice@example.com',
 }
 
-const product: Product = {
+const product = {
 	id: 'p1',
 	name: 'Laptop',
 	price: 999.99,
 }
+
+// 🐨 Open `data.ts` and move the user and product objects there
+//    Export them using named exports, then import them here
 
 displayUser(user)
 displayProduct(product)

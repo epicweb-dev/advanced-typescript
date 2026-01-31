@@ -40,11 +40,15 @@ function fetchOrders(userId: string): Promise<Array<Order>> {
 	})
 }
 
-// 🐨 Create an async function called `loadUserData`
-//    Use await to fetch the user, then fetch their orders
-//    Log both the user and orders
+function loadUserData() {
+	return fetchUser().then((user) => {
+		return fetchOrders(user.id).then((orders) => {
+			return { user, orders }
+		})
+	})
+}
 
-// 🐨 Call the async function
+// 🐨 Refactor `loadUserData` to use async/await instead of .then() chains
 
 // 🐨 Export your function so we can verify your work
 

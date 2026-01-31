@@ -13,11 +13,10 @@ type Order = {
 	total: number
 }
 
-function fetchUser(): Promise<User> {
+function fetchUser(userId: string): Promise<User> {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
-			// Simulate random failures
-			if (Math.random() > 0.5) {
+			if (userId === '1') {
 				resolve({
 					id: '1',
 					name: 'Alice',
@@ -45,9 +44,9 @@ function fetchOrders(userId: string): Promise<Array<Order>> {
 	})
 }
 
-async function loadUserData() {
+async function loadUserData(userId: string) {
 	try {
-		const user = await fetchUser()
+		const user = await fetchUser(userId)
 		console.log('User:', user)
 
 		const orders = await fetchOrders(user.id)

@@ -6,11 +6,13 @@ functionality between them.
 
 ```ts
 // user.ts
-export type User = { id: string; name: string }
-export function createUser(name: string): User { ... }
+export const user = { id: 'u1', name: 'Ada' }
+export function getDisplayName(user: { name: string }) {
+	return user.name
+}
 
 // main.ts
-import { User, createUser } from './user'
+import { user, getDisplayName } from './user.ts'
 ```
 
 ## Module Benefits
@@ -25,5 +27,5 @@ import { User, createUser } from './user'
 	and TypeScript will handle type checking across module boundaries.
 </callout-info>
 
-In this exercise, you'll organize code using modules and understand the
-difference between default and named exports.
+In this exercise, you'll organize code using modules, understand the
+difference between default and named exports, and practice type-only imports.

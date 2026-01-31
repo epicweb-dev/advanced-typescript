@@ -4,24 +4,17 @@
 things organized.
 
 ```ts
-// types.ts
-export type Book = { title: string; pages: number }
+// data.ts
+export const book = { title: 'TypeScript Tips', pages: 200 }
 
 // index.ts
-import { type Book } from './types.ts'
+import { book } from './data.ts'
 ```
 
-🐨 Create a new file `types.ts` and:
+🐨 Open <InlineFile file="data.ts" /> and:
 
-1. Move the `User` and `Product` types to `types.ts`
+1. Move the `user` and `product` objects to `data.ts`
 2. Export them using named exports
 3. Import them in `index.ts`
-
-<callout-info>
-	When importing **types only** (not values), use `import { type X }` syntax.
-	This tells TypeScript (and Node.js) that these imports are purely for type
-	checking and should be erased at runtime. This is required when running
-	TypeScript natively with Node.js.
-</callout-info>
 
 📜 [MDN - ES Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
