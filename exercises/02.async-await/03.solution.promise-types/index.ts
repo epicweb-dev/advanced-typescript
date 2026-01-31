@@ -20,7 +20,7 @@ async function fetchUser(): Promise<User> {
 				name: 'Alice',
 				email: 'alice@example.com',
 			})
-		}, 1000)
+		}, 10)
 	})
 }
 
@@ -31,7 +31,7 @@ async function fetchProducts(): Promise<Array<Product>> {
 				{ id: 'p1', name: 'Laptop', price: 999.99 },
 				{ id: 'p2', name: 'Mouse', price: 29.99 },
 			])
-		}, 500)
+		}, 10)
 	})
 }
 

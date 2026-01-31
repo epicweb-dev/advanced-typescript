@@ -21,7 +21,7 @@ function fetchUser(): Promise<User> {
 				name: 'Alice',
 				email: 'alice@example.com',
 			})
-		}, 1000)
+		}, 10)
 	})
 }
 
@@ -36,7 +36,7 @@ function fetchOrders(userId: string): Promise<Array<Order>> {
 					total: 1299.99,
 				},
 			])
-		}, 500)
+		}, 10)
 	})
 }
 

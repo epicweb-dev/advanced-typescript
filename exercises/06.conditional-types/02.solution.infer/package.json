@@ -1,5 +1,5 @@
 {
-  "name": "exercises_06.conditional-types_02.solution.basic-infer",
+  "name": "exercises_06.conditional-types_02.solution.infer",
   "type": "module",
   "scripts": {
     "start": "npx @kentcdodds/log-module@latest ./index.ts",
