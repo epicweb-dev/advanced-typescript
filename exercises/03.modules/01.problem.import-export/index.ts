@@ -20,8 +20,8 @@ const product = {
 	price: 999.99,
 }
 
-// 🐨 Open `data.ts` and move the user and product objects there
-//    Export them using named exports, then import them here
+// 🐨 Move the user and product objects into `data.ts`
+//    Export them there and import them back here
 
 displayUser(user)
 displayProduct(product)

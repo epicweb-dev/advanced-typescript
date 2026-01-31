@@ -1,10 +1,10 @@
 // Default vs Named Exports
 
-// 🐨 Import the named exports: formatCurrency and formatDate
+// 🐨 Bring formatCurrency and formatDate in from './utils.ts'
 // @ts-expect-error - 💣 remove this comment when it passes
 import { formatCurrency, formatDate } from './utils.ts'
 
-// 🐨 Import the default export: Formatter
+// 🐨 Bring Formatter in from './utils.ts' as the default import
 // @ts-expect-error - 💣 remove this comment when it passes
 import Formatter from './utils.ts'
 

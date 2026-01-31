@@ -13,13 +13,13 @@ function processData(data: Array<string>, options: { limit: number }): number {
 	return Math.min(data.length, options.limit)
 }
 
-// 🐨 Create a type `NewUser` using ReturnType<typeof createUser>
+// 🐨 Create a type `NewUser` that matches the return type of createUser
 
-// 🐨 Create a type `CreateUserParams` using Parameters<typeof createUser>
+// 🐨 Create a type `CreateUserParams` that matches createUser's parameters
 
-// 🐨 Create a type `FetchUserResult` using ReturnType and Awaited
+// 🐨 Create a type `FetchUserResult` for the resolved value of fetchUser
 
-// 🐨 Create a type `ProcessDataArgs` using Parameters
+// 🐨 Create a type `ProcessDataArgs` that matches processData's parameters
 
 // 🐨 Create a wrapper function that logs calls to createUser
 // It should have the same parameters and return type as createUser

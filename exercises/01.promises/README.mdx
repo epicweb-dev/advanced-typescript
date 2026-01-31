@@ -99,12 +99,18 @@ TypeScript. They represent a value that will be available in the future—either
 a successful result or a failure.
 
 ```ts
-// A Promise that resolves to a string
-function fetchUser(): Promise<string> {
+type Shipment = {
+	trackingId: string
+	status: 'label' | 'in-transit' | 'delivered'
+}
+
+function fetchShipment(trackingId: string): Promise<Shipment> {
 	return new Promise((resolve) => {
-		setTimeout(() => resolve('Alice'), 1000)
+		setTimeout(() => resolve({ trackingId, status: 'in-transit' }), 300)
 	})
 }
+
+fetchShipment('shp_123').then((shipment) => console.log(shipment.status))
 ```
 
 ## Why Promises Matter

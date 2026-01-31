@@ -12,8 +12,8 @@ type Product = {
 	price: number
 }
 
-// 🐨 Open `types.ts` and move the User and Product types there
-//    Export them using named exports, then import them here using type-only imports
+// 🐨 Move the User and Product types into `types.ts`
+//    Export them there and import them back here without runtime imports
 
 function displayUser(user: User) {
 	console.log(`User: ${user.name} (${user.email})`)

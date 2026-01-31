@@ -8,7 +8,6 @@ type User = {
 
 // 🐨 Create a function `fetchUser` that returns a Promise<User>
 //    The Promise should resolve after 1 second with a user object
-//    Use setTimeout to simulate the delay
 
 // 🐨 Call fetchUser and log the result when it resolves
 

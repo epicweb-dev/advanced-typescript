@@ -5,17 +5,21 @@ like synchronous code. It's the preferred way to write async code in modern
 TypeScript.
 
 ```ts
-// With Promises
-fetchUser()
-	.then((user) => console.log(user))
-	.catch((error) => console.error(error))
+type Playlist = { id: string; trackIds: Array<string> }
+type Track = { id: string; title: string }
 
-// With async/await
-try {
-	const user = await fetchUser()
-	console.log(user)
-} catch (error) {
-	console.error(error)
+async function fetchPlaylist(id: string): Promise<Playlist> {
+	return { id, trackIds: ['t1', 't2'] }
+}
+
+async function fetchTracks(ids: Array<string>): Promise<Array<Track>> {
+	return ids.map((id) => ({ id, title: `Track ${id}` }))
+}
+
+async function loadPlaylist(id: string) {
+	const playlist = await fetchPlaylist(id)
+	const tracks = await fetchTracks(playlist.trackIds)
+	return { playlist, tracks }
 }
 ```
 

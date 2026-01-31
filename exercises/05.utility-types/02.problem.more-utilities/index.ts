@@ -8,25 +8,22 @@ type User = {
 	website?: string
 }
 
-// 🐨 Create a type Config using Record<string, number>
+// 🐨 Create a type Config with string keys and number values
 
-// 🐨 Create a type ReadonlyUser using Readonly<User>
+// 🐨 Create a type ReadonlyUser where all User properties are readonly
 
-// 🐨 Create a type UserWithoutId using Omit<User, 'id'>
-//    This removes the id property
+// 🐨 Create a type UserWithoutId that removes the id property
 
-// 🐨 Create a type RequiredUser using Required<User>
-//    This makes bio and website required
+// 🐨 Create a type RequiredUser where bio and website are required
 
 // Union type utilities
 type Status = 'pending' | 'active' | 'inactive' | 'deleted' | null | undefined
 
 // 🐨 Create a type ActiveStatus that excludes 'deleted' from Status
 
-// 🐨 Create a type ValidStatus that is NonNullable<Status>
-//    This removes null and undefined
+// 🐨 Create a type ValidStatus that removes null and undefined
 
-// 🐨 Create a type StringStatus using Extract to keep only string types
+// 🐨 Create a type StringStatus that keeps only string variants
 
 // 🐨 Export your test values so we can verify your work
 

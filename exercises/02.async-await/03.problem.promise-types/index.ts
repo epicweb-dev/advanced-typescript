@@ -12,8 +12,7 @@ type Product = {
 	price: number
 }
 
-// 🐨 Add explicit return type annotations to these async functions
-//    Use Promise<User> and Promise<Array<Product>> respectively
+// 🐨 Add explicit Promise-based return type annotations to these async functions
 // 🦺 async function fetchUser(): Promise<User> { ... }
 
 async function fetchUser() {

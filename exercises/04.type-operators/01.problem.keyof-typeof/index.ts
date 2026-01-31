@@ -20,12 +20,12 @@ const config = {
 	retries: 3,
 }
 
-// 🐨 Create a type `Config` from the config object using typeof
+// 🐨 Create a type `Config` based on the config object
 
 // 🐨 Create a type `ConfigKey` from Config's keys
 
 // Using as const for literal types
-// 🐨 Add `as const` to preserve literal types
+// 🐨 Preserve literal types for the httpMethods array
 const httpMethods = ['GET', 'POST', 'PUT', 'DELETE']
 
 // 🐨 Create a type `HttpMethod` from the array

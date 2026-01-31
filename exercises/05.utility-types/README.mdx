@@ -5,15 +5,19 @@ types. These built-in helpers reduce boilerplate and make your types more
 expressive.
 
 ```ts
-type User = { id: string; name: string; email: string }
+type Event = { id: string; title: string; startsAt: Date; location?: string }
 
 // Make all properties optional
-type PartialUser = Partial<User>
-// { id?: string; name?: string; email?: string }
+type DraftEvent = Partial<Event>
+// { id?: string; title?: string; startsAt?: Date; location?: string }
 
-// Pick specific properties
-type UserPreview = Pick<User, 'id' | 'name'>
-// { id: string; name: string }
+// Select specific properties
+type EventSummary = Pick<Event, 'id' | 'title'>
+// { id: string; title: string }
+
+// Remove specific properties
+type PublicEvent = Omit<Event, 'location'>
+// { id: string; title: string; startsAt: Date }
 ```
 
 ## Object Utility Types

@@ -31,6 +31,17 @@ type Unwrap<T> = T extends Promise<infer U> ? U : T
 // Filter union types
 type OnlyStrings<T> = T extends string ? T : never
 type Result = OnlyStrings<'a' | 1 | 'b' | 2> // 'a' | 'b'
+
+// Check if a type has a specific property
+type Ticket = { priority: 'low' | 'high'; id: string }
+
+// Check if a type has a specific property
+type IsHighPriority<T> = T extends { priority: 'high' } ? true : false
+
+// Extract the type of a specific property
+type High = IsHighPriority<Ticket> // false (priority is not a single literal)
+// Extract the type of a specific property
+type HighOnly = IsHighPriority<{ priority: 'high' }> // true
 ```
 
 ## The `infer` Keyword

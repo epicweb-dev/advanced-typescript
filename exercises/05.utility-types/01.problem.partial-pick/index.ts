@@ -8,14 +8,11 @@ type User = {
 	createdAt: Date
 }
 
-// 🐨 Create a type PartialUser using Partial<User>
-//    This makes all properties optional
+// 🐨 Create a type PartialUser where all User properties are optional
 
-// 🐨 Create a type UserNameEmail using Pick<User, 'name' | 'email'>
-//    This selects only name and email properties
+// 🐨 Create a type UserNameEmail that includes only name and email
 
-// 🐨 Create a type UserUpdate that combines Partial and Pick
-//    It should allow updating only name and email, and both should be optional
+// 🐨 Create a type UserUpdate that allows optional updates to name and email only
 
 // @ts-expect-error - 💣 remove this comment
 function updateUser(user: User, updates: UserUpdate) {

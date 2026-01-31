@@ -1,2 +1,1 @@
-// 🐨 Export the User and Product types here
-//    Use named exports: export type User = { ... }
+// 🐨 Export the User and Product types from this module

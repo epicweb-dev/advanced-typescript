@@ -1,2 +1,1 @@
-// 🐨 Export the user and product values here
-//    Use named exports: export const user = { ... }
+// 🐨 Export the user and product values from this module

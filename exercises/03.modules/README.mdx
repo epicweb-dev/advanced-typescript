@@ -5,14 +5,13 @@ and TypeScript. They let you split code into separate files and import/export
 functionality between them.
 
 ```ts
-// user.ts
-export const user = { id: 'u1', name: 'Ada' }
-export function getDisplayName(user: { name: string }) {
-	return user.name
+export const menuItem = { name: 'Tea', price: 3.5 }
+export function formatMenuItem(item: { name: string; price: number }) {
+	return `${item.name}: $${item.price}`
 }
 
-// main.ts
-import { user, getDisplayName } from './user.ts'
+// app.ts
+import { menuItem, formatMenuItem } from './menu.ts'
 ```
 
 ## Module Benefits

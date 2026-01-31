@@ -48,7 +48,7 @@ function loadUserData() {
 	})
 }
 
-// 🐨 Refactor `loadUserData` to use async/await instead of .then() chains
+// 🐨 Refactor `loadUserData` so the async flow is linear (no nested promise chains)
 
 // 🐨 Export your function so we can verify your work
 
