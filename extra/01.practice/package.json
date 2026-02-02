@@ -1,0 +1,8 @@
+{
+  "name": "extra_01.practice",
+  "type": "module",
+  "scripts": {
+    "start": "npx @kentcdodds/log-module ./index.ts",
+    "test": "node --test index.test.ts && npx @kentcdodds/typecheck-modules ."
+  }
+}
