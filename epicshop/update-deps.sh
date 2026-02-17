@@ -1,5 +1,5 @@
-npx npm-check-updates --dep prod,dev --upgrade --workspaces --root
-cd epicshop && npx npm-check-updates --dep prod,dev --upgrade --root
+npx npm-check-updates --dep prod,dev --upgrade --workspaces --root --reject eslint
+cd epicshop && npx npm-check-updates --dep prod,dev --upgrade --root --reject eslint
 cd ..
 rm -rf node_modules package-lock.json ./epicshop/package-lock.json ./epicshop/node_modules ./exercises/**/node_modules
 npm install
