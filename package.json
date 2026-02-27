@@ -5,7 +5,6 @@
     "title": "Advanced TypeScript 🚀",
     "subtitle": "Writing code that survives the real world",
     "githubRepo": "https://github.com/epicweb-dev/advanced-typescript",
-    "subdomain": "advanced-typescript",
     "instructor": {
       "name": "Kent C. Dodds",
       "avatar": "/images/instructor.png",
@@ -14,7 +13,10 @@
     "product": {
       "host": "www.epicweb.dev",
       "displayName": "EpicWeb.dev",
-      "displayNameShort": "Epic Web"
+      "displayNameShort": "Epic Web",
+      "slug": "advanced-typescript",
+      "discordChannelId": "1161045224907341972",
+      "discordTags": ["1161046174439063593", "1474188135545180335"]
     },
     "appType": "export"
   },
